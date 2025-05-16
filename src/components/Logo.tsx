@@ -5,9 +5,9 @@ const Logo = ({ className = "" }: { className?: string }) => {
   return (
     <div className={`flex items-center ${className}`}>
       <img 
-        src="/lovable-uploads/0c212343-7aef-4795-8296-eebd44d4ddfe.png" 
+        src="/lovable-uploads/454dd6e1-5373-412e-b798-843fbca39193.png" 
         alt="StreamHib Logo" 
-        className="h-10 md:h-12" 
+        className="h-14 md:h-16" // Increased the logo size
       />
     </div>
   );
