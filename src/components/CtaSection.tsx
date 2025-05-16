@@ -28,7 +28,7 @@ const CtaSection = () => {
           <Button size="lg" className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg">
             🎬 Coba Gratis Sekarang
           </Button>
-          <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/10 font-semibold text-lg">
+          <Button variant="outline" size="lg" className="bg-white text-streamhib-blue border-white hover:bg-white/90 hover:text-streamhib-blue/90 font-semibold text-lg">
             🚀 Lihat Demo
           </Button>
         </div>

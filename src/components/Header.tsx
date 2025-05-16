@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="w-full py-4 px-4 md:px-6 flex items-center justify-between z-10 sticky top-0 backdrop-blur-sm bg-white/70 border-b border-gray-100 shadow-sm">
+    <header className="w-full py-4 px-4 md:px-6 flex items-center justify-between z-10 sticky top-0 glass-effect">
       <Logo />
       
       <NavigationMenu>

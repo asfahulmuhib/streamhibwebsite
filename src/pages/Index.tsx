@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-streamhib-blue/5 via-blue-50/50 to-streamhib-red/5">
       <Header />
       <main>
         <HeroSection />
@@ -21,7 +21,9 @@ const Index = () => {
         <section id="testimoni">
           <TestimonialsSection />
         </section>
-        <PricingSection />
+        <section id="pricing">
+          <PricingSection />
+        </section>
         <FaqSection />
         <CtaSection />
       </main>
