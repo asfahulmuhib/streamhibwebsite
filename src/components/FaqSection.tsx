@@ -44,10 +44,10 @@ const FaqSection = () => {
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="border-b border-streamhib-blue/10">
-              <AccordionTrigger className="text-lg font-medium text-gray-800 hover:text-streamhib-blue">
+              <AccordionTrigger className="text-lg font-medium text-gray-800 hover:text-streamhib-blue text-left py-3">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 text-left">
+              <AccordionContent className="text-gray-600 text-left py-2">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
