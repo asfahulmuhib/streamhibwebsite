@@ -18,9 +18,9 @@ const PricingSection = () => {
           {/* Basic Plan */}
           <Card className="border-streamhib-blue/20 hover:shadow-lg transition-shadow duration-300">
             <CardHeader className="pb-2">
-              <h3 className="text-xl font-bold">Starter</h3>
+              <h3 className="text-xl font-bold">Set 1</h3>
               <div className="mt-4">
-                <span className="text-4xl font-bold">Rp99k</span>
+                <span className="text-4xl font-bold">Rp200k</span>
                 <span className="text-gray-500 ml-1">/bulan</span>
               </div>
             </CardHeader>
@@ -28,25 +28,41 @@ const PricingSection = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>1 channel YouTube</span>
+                  <span>Bisa Untuk Banyak Channel Youtube</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>10 jam video storage</span>
+                  <span>10 Live, Res 720p, FPS 30, Bit 2500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Jadwal otomatis</span>
+                  <span>8 Live, Res 1080p, FPS 30, Bit 6500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Resolusi up to 720p</span>
+                  <span>Sewaktu-waktu IP Berubah</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Support YouTube & Facebook</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Fitur Penjadwalan Youtube</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Memakai Server DO</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Penyimpanan 60GB</span>
                 </li>
               </ul>
             </CardContent>
             <CardFooter>
               <Button className="w-full bg-streamhib-red hover:bg-streamhib-red/90">
-                🎬 Coba Gratis 7 Hari
+                Pesan Sekarang
               </Button>
             </CardFooter>
           </Card>
