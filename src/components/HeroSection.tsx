@@ -1,9 +1,16 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Play, MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
+  const handleTryNowClick = () => {
+    window.open("http://emuhib.com", "_blank", "noopener,noreferrer");
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/6285722165165?text=Kak%20aku%20ingin%20pesan%20streamhib%2C%20transfer%20kemana%3F", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="relative w-full min-h-[500px] md:min-h-[600px] flex flex-col items-center justify-center px-4 py-12 md:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-100/80 via-blue-50/50 to-white/80 -z-10"></div>
@@ -35,37 +42,22 @@ const HeroSection = () => {
         </h2>
 
         <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center">
-  <a
-    href="http://emuhib.com"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button
-      size="lg"
-      className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg"
-    >
-      🎬 Coba Gratis Sekarang
-    </Button>
-  </a>
-  <a
-    href="https://wa.me/6285722165165?text=Kak%20aku%20ingin%20pesan%20streamhib%2C%20transfer%20kemana%3F" // Replace with your WhatsApp link
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button
-      variant="outline"
-      size="lg"
-      className="border-streamhib-blue text-streamhib-blue hover:bg-streamhib-blue/10 font-semibold text-lg shadow-sm"
-    >
-      <img
-        src="/lovable-uploads/whatsapplogo.png" // Replace with the path to your WhatsApp logo image
-        alt="WhatsApp Logo"
-        className="w-5 h-5 mr-2" // Adjust size and spacing as needed
-      />
-      Pesan Lewat Whatsapp
-    </Button>
-  </a>
-</div>
+          <Button
+            onClick={handleTryNowClick}
+            size="lg"
+            className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg"
+          >
+            <Play className="h-5 w-5 mr-2" /> Coba Gratis Sekarang
+          </Button>
+          <Button
+            onClick={handleWhatsAppClick}
+            variant="outline"
+            size="lg"
+            className="border-streamhib-blue text-streamhib-blue hover:bg-streamhib-blue/10 font-semibold text-lg shadow-sm"
+          >
+            <MessageCircle className="h-5 w-5 mr-2" /> Pesan Lewat Whatsapp
+          </Button>
+        </div>
       </div>
     </section>
   );
