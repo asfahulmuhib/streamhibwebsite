@@ -26,8 +26,9 @@ const HeroSection = () => {
 
       <div className="max-w-[800px] mx-auto text-center space-y-6 animate-fade-in">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-          <span className="text-gradient">Live YouTube 24/7</span> <span className="text-streamhib-red">Tanpa Komputer</span>
-        </h1>
+  <span className="text-xl md:text-2xl font-semibold block mb-2 text-gradient">Bikin Live Jadi Cuan</span>
+  <span className="text-gradient">Live YouTube 24/7</span> <span className="text-streamhib-red">Tanpa Komputer</span>
+</h1>
         <h2 className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
           StreamHib bantu kamu live video nonstop, langsung dari server. 
           <span className="font-semibold block mt-2">Tanpa install, tanpa takut mati sendiri. Setting 1x, live terus!</span>
