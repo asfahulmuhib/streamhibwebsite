@@ -51,9 +51,8 @@ const HeroSection = () => {
           </Button>
           <Button
             onClick={handleWhatsAppClick}
-            variant="outline"
             size="lg"
-            className="border-[#25D366] text-[#25D366] hover:bg-[#128C7E]/10 font-semibold text-lg shadow-sm"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold text-lg shadow-sm"
           >
             <MessageCircle className="h-5 w-5 mr-2" /> Pesan Via Whatsapp
           </Button>
