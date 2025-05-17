@@ -177,7 +177,7 @@ const PricingSection = () => {
         
         <div className="mt-8 bg-gray-50 rounded-lg p-6 max-w-3xl mx-auto">
           <p className="text-center text-gray-600">
-            Pemesanan bisa juga langsung Transer sesuai nominal harga yang tertera ke Rekening Seabank
+            Pemesanan bisa juga langsung transfer sesuai nominal Harga yang tertera ke Rekening Seabank
             <br /> <span className="font-semibold">901872537380</span>
             <br /> a/n <span className="font-semibold">Asfahul Muhib</span>
             <br /> Kemudian silahkan kirim bukti transfer ke <span className="font-semibold">Whatsapp atau Telegram</span> StreamHib.
