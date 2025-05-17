@@ -28,11 +28,11 @@ const PricingSection = () => {
               <ul className="text-left space-y-2">                
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>10 Live, Res 720p, FPS 30, Bit 2500</span>
+                  <span>10 Live, 720p, FPS 30, Bit 2500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>8 Live, Res 1080p, FPS 30, Bit 6500</span>
+                  <span>8 Live, 1080p, FPS 30, Bit 6500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
@@ -83,15 +83,15 @@ const PricingSection = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>25 Live, Res 720p, FPS 30, Bit 2500</span>
+                  <span>25 Live, 720p, FPS 30, Bit 2500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>17 Live, Res 1080p, FPS 30, Bit 6500</span>
+                  <span>17 Live, 1080p, FPS 30, Bit 6500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>8 Live, Res 4k, FPS 30, Bit 12000</span>
+                  <span>8 Live, 4k, FPS 30, Bit 12000</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
@@ -103,7 +103,7 @@ const PricingSection = () => {
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Lebih Stabil & IP Tidak Berubah-ubah</span>
+                  <span>Lebih Stabil & IP Tidak Berubah</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
@@ -135,15 +135,15 @@ const PricingSection = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>52 Live, Res 720p, FPS 30, Bit 2500</span>
+                  <span>52 Live, 720p, FPS 30, Bit 2500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>33 Live, Res 1080p, FPS 30, Bit 6500</span>
+                  <span>33 Live, 1080p, FPS 30, Bit 6500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>14 Live, Res 4k, FPS 30, Bit 12000</span>
+                  <span>14 Live, 4k, FPS 30, Bit 12000</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
@@ -155,7 +155,7 @@ const PricingSection = () => {
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Lebih Stabil & IP Tidak Berubah-ubah</span>
+                  <span>Lebih Stabil & IP Tidak Berubah</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
