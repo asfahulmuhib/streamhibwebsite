@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -61,9 +60,11 @@ const PricingSection = () => {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-streamhib-red hover:bg-streamhib-red/90">
-                Pesan Sekarang
-              </Button>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-streamhib-red hover:bg-streamhib-red/90">
+                  Pesan Sekarang
+                </Button>
+              </a>
             </CardFooter>
           </Card>
           
@@ -116,9 +117,11 @@ const PricingSection = () => {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-streamhib-blue hover:bg-streamhib-blue/90">
-                🚀 Pesan Sekarang
-              </Button>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-streamhib-blue hover:bg-streamhib-blue/90">
+                  🚀 Pesan Sekarang
+                </Button>
+              </a>
             </CardFooter>
           </Card>
           
@@ -168,9 +171,11 @@ const PricingSection = () => {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-streamhib-red hover:bg-streamhib-red/90">
-                🎯 Pesan Sekarang
-              </Button>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-streamhib-red hover:bg-streamhib-red/90">
+                  🎯 Pesan Sekarang
+                </Button>
+              </a>
             </CardFooter>
           </Card>
         </div>
@@ -180,7 +185,7 @@ const PricingSection = () => {
             Pemesanan bisa juga langsung transfer sesuai nominal Harga yang tertera ke Rekening Seabank
             <br /> <span className="font-semibold">901872537380</span>
             <br /> a/n <span className="font-semibold">Asfahul Muhib</span>
-            <br /> Kemudian silahkan kirim bukti transfer ke <span className="font-semibold">Whatsapp</span> atau <span className="font-semibold">Telegram</span> StreamHib.
+            <br /> Kemudian silahkan kirim bukti transfer ke <a href="https://wa.me/6285722165165?text=Halo%20kak%2C%20Saya%20mau%20konfirmasi%20pemesanan%20dan%20berikut%20ini%20bukti%20Transfernya.." target="_blank" rel="noopener noreferrer">Whatsapp</a> atau <a href="https://t.me/streamhib" target="_blank" rel="noopener noreferrer">Telegram</a> StreamHib.
             <br />Bisa langsung aktif hari ini!
           </p>
         </div>
