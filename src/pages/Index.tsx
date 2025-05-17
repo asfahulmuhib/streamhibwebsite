@@ -18,7 +18,9 @@ const Index = () => {
     <div className="min-h-screen w-full bg-gradient-to-b from-blue-50/80 via-white to-blue-50/50">
       <Header />
       <main className="w-full">
-        <HeroSection />
+        <section id="hero">
+          <HeroSection />
+        </section>
         <section id="fitur" className="w-full bg-gradient-cool">
           <FeatureSection />
         </section>
