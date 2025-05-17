@@ -1,8 +1,13 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Play } from "lucide-react";
 
 const PricingSection = () => {
+  const handleSubscribeClick = () => {
+    window.open("#", "_blank", "noopener,noreferrer"); // Placeholder URL, ganti dengan link nyata
+  };
+
   return (
     <section id="pricing" className="py-16 md:py-24 px-4">
       <div className="max-w-5xl mx-auto text-center">
@@ -60,11 +65,12 @@ const PricingSection = () => {
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90">
-                  Pesan Sekarang
-                </Button>
-              </a>
+              <Button
+                onClick={handleSubscribeClick}
+                className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
+              >
+                <Play className="h-5 w-5 mr-2" /> Mulai Langganan
+              </Button>
             </CardFooter>
           </Card>
           
@@ -117,11 +123,12 @@ const PricingSection = () => {
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full max-w-xs bg-streamhib-blue hover:bg-streamhib-blue/90">
-                  🚀 Pesan Sekarang
-                </Button>
-              </a>
+              <Button
+                onClick={handleSubscribeClick}
+                className="w-full max-w-xs bg-streamhib-blue hover:bg-streamhib-blue/90"
+              >
+                <Play className="h-5 w-5 mr-2" /> Mulai Langganan
+              </Button>
             </CardFooter>
           </Card>
           
@@ -171,11 +178,12 @@ const PricingSection = () => {
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90">
-                  🎯 Pesan Sekarang
-                </Button>
-              </a>
+              <Button
+                onClick={handleSubscribeClick}
+                className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
+              >
+                <Play className="h-5 w-5 mr-2" /> Mulai Langganan
+              </Button>
             </CardFooter>
           </Card>
         </div>
@@ -185,7 +193,7 @@ const PricingSection = () => {
             Pemesanan bisa juga langsung transfer sesuai nominal Harga yang tertera ke Rekening Seabank
             <br /> <span className="font-semibold">901872537380</span>
             <br /> a/n <span className="font-semibold">Asfahul Muhib</span>
-            <br /> Kemudian silahkan kirim bukti transfer ke <a href="https://wa.me/6285722165165?text=Halo%20kak%2C%20Saya%20mau%20konfirmasi%20pemesanan%20dan%20berikut%20ini%20bukti%20Transfernya.." target="_blank" rel="noopener noreferrer"><span className="font-semibold">Whatsapp</span></a> atau <a href="https://t.me/streamhib" target="_blank" rel="noopener noreferrer"><span className="font-semibold">Telegram</span></a> StreamHib.
+            <br /> Kemudian silahkan kirim bukti transfer ke <a href="https://wa.me/6285722165165?text=Halo%20kak%2C%20Saya%20mau%20konfirmasi%20pemesanan%20dan%20berikut%20ini%20bukti%20Transfernya.." target="_blank" rel="noopener noreferrer"><span className="font-semibold text-[#128C7E]">Whatsapp</span></a> atau <a href="https://t.me/streamhib" target="_blank" rel="noopener noreferrer"><span className="font-semibold text-[#1E90FF]">Telegram</span></a> StreamHib.
             <br />Bisa langsung aktif hari ini!
           </p>
         </div>
