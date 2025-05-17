@@ -49,7 +49,7 @@ const TestimonialsSection = ({ language }: TestimonialsSectionProps) => {
         
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-blue-50/30 backdrop-blur-sm animate-float" style={{animationDelay: `${index * 0.2}s`}}>
+            <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-blue-50/30 backdrop-blur-sm" style={{transitionDelay: `${index * 0.2}s`}}>
               <CardContent className="p-6 relative">
                 <div className="absolute top-4 right-4 text-5xl text-streamhib-red/10 font-serif">"</div>
                 <p className="text-lg text-gray-700 mb-6 relative z-10">

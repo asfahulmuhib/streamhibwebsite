@@ -78,28 +78,43 @@ const FeatureSection = () => {
           </div>
         </div>
         
-        {/* Benefits Grid */}
-        <h3 className="text-2xl font-bold text-streamhib-blue mb-8 text-center">Manfaat Utama</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            "Live langsung dari server, tanpa komputer",
-            "Bisa diakses dari HP/laptop (web-based)",
-            "Tidak pernah mati sendiri (stabil 24/7)",
-            "Fitur jadwal otomatis, bisa live berkali-kali",
-            "Cocok untuk ASMR, musik santai, hujan, dll",
-            "Tidak perlu skill teknis — cukup klik & jalan"
-          ].map((benefit, index) => (
-            <Card key={index} className="border-streamhib-blue/20 hover:shadow-md transition-shadow duration-300">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-streamhib-red text-white flex items-center justify-center">
-                    <span className="text-sm">✓</span>
-                  </div>
-                  <p className="text-gray-700">{benefit}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Benefits Grid - Enhanced for better visibility */}
+        <div className="relative">
+          {/* Background elements for emphasis */}
+          <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-gradient-to-br from-blue-100/50 to-purple-100/50 blur-3xl -z-10"></div>
+          <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-gradient-to-br from-blue-100/50 to-purple-100/50 blur-3xl -z-10"></div>
+          
+          {/* Main content */}
+          <div className="backdrop-blur-sm bg-white/60 rounded-2xl shadow-xl border border-white/60 p-8 md:p-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-streamhib-blue mb-8 text-center relative">
+              <span className="relative inline-block">
+                Manfaat Utama
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-streamhib-red via-streamhib-light-blue to-streamhib-blue rounded-full"></div>
+              </span>
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                "Live langsung dari server, tanpa komputer",
+                "Bisa diakses dari HP/laptop (web-based)",
+                "Tidak pernah mati sendiri (stabil 24/7)",
+                "Fitur jadwal otomatis, bisa live berkali-kali",
+                "Cocok untuk ASMR, musik santai, hujan, dll",
+                "Tidak perlu skill teknis — cukup klik & jalan"
+              ].map((benefit, index) => (
+                <Card key={index} className="border-none bg-gradient-to-br from-white/90 to-blue-50/80 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <CardContent className="pt-6">
+                    <div className="flex items-center gap-4">
+                      <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gradient-to-r from-streamhib-red to-streamhib-light-blue text-white flex items-center justify-center shadow-md">
+                        <span className="text-lg">✓</span>
+                      </div>
+                      <p className="text-gray-700 font-medium">{benefit}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

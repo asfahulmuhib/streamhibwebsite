@@ -32,7 +32,7 @@ const CtaSection = () => {
           <Button size="lg" className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg">
             🎬 {language === 'id' ? 'Coba Gratis Sekarang' : 'Try Free Now'}
           </Button>
-          <Button variant="outline" size="lg" className="bg-transparent text-white border-white hover:bg-white/20 hover:border-white font-semibold text-lg">
+          <Button variant="outline" size="lg" className="bg-white/20 text-white border-white hover:bg-white/30 hover:border-white font-semibold text-lg">
             🚀 {language === 'id' ? 'Lihat Demo' : 'Watch Demo'}
           </Button>
         </div>
