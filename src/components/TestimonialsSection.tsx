@@ -22,9 +22,9 @@ const testimonials = [
   {
     quote: "Cuma modal HP dan dashboard ini, live terus jalan.",
     quoteEn: "With just a phone and this dashboard, my stream keeps going.",
-    author: "Belum ada",
-    channel: "Indonesia",
-    image: "#"
+    author: "Nisa",
+    channel: "Depok, Jawa Barat",
+    image: "/lovable-uploads/nisa.png"
   }
 ];
 
