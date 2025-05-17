@@ -16,10 +16,10 @@ const LanguageSwitcher = () => {
       variant="ghost" 
       size="sm" 
       onClick={toggleLanguage}
-      className="flex items-center gap-1 text-streamhib-blue hover:bg-streamhib-blue/10"
+      className="flex items-center gap-1 text-streamhib-blue hover:bg-gradient-to-r from-streamhib-blue/10 to-streamhib-light-blue/5 transition-all duration-300"
     >
-      <Globe size={16} />
-      <span>{language === 'id' ? 'EN' : 'ID'}</span>
+      <Globe size={16} className="text-streamhib-blue" />
+      <span className="font-medium">{language === 'id' ? 'EN' : 'ID'}</span>
     </Button>
   );
 };

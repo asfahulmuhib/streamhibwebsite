@@ -5,15 +5,18 @@ import { Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[500px] md:min-h-[600px] flex flex-col items-center justify-center px-4 py-12 md:py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white -z-10"></div>
+    <section className="relative w-full min-h-[500px] md:min-h-[600px] flex flex-col items-center justify-center px-4 py-12 md:py-20 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-100/80 via-blue-50/50 to-white/80 -z-10"></div>
       
-      {/* Animated Waves Background */}
-      <div className="absolute inset-0 opacity-10 -z-10">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border-4 border-streamhib-blue/30 animate-pulse-light"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border-4 border-streamhib-blue/20 animate-pulse-light" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border-4 border-streamhib-blue/10 animate-pulse-light" style={{ animationDelay: '1s' }}></div>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border-4 border-streamhib-blue/20 animate-pulse-light"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border-4 border-streamhib-blue/10 animate-pulse-light" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border-4 border-streamhib-red/10 animate-pulse-light" style={{ animationDelay: '1s' }}></div>
       </div>
+      
+      {/* Enhanced background pattern */}
+      <div className="absolute inset-0 bg-pattern opacity-20 -z-5"></div>
       
       {/* Live Indicator */}
       <div className="absolute top-4 right-4 md:top-8 md:right-8 flex items-center gap-2 bg-black/80 text-white py-1 px-3 rounded-full">
@@ -22,8 +25,8 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-[800px] mx-auto text-center space-y-6 animate-fade-in">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-streamhib-blue mb-4 leading-tight">
-          Live YouTube 24/7 <span className="text-streamhib-red">Tanpa Komputer</span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+          <span className="text-gradient">Live YouTube 24/7</span> <span className="text-streamhib-red">Tanpa Komputer</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
           StreamHib bantu kamu live video nonstop, langsung dari server. 
@@ -34,7 +37,7 @@ const HeroSection = () => {
           <Button size="lg" className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg">
             🎬 Coba Gratis Sekarang
           </Button>
-          <Button variant="outline" size="lg" className="border-streamhib-blue text-streamhib-blue hover:bg-streamhib-blue/5 font-semibold text-lg">
+          <Button variant="outline" size="lg" className="border-streamhib-blue text-streamhib-blue hover:bg-streamhib-blue/10 font-semibold text-lg shadow-sm">
             🚀 Mulai Live Hari Ini
           </Button>
         </div>

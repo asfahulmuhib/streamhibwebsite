@@ -9,22 +9,25 @@ import FaqSection from '@/components/FaqSection';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
+import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
   const { language } = useLanguage();
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-streamhib-blue/5 via-blue-50/50 to-streamhib-red/5">
+    <div className="min-h-screen w-full bg-gradient-to-b from-blue-50/80 via-white to-blue-50/50">
       <Header />
-      <main>
+      <main className="w-full">
         <HeroSection />
-        <section id="fitur">
+        <section id="fitur" className="w-full bg-gradient-cool">
           <FeatureSection />
         </section>
-        <section id="testimoni">
+        <Separator className="h-px bg-gray-100" />
+        <section id="testimoni" className="w-full">
           <TestimonialsSection language={language} />
         </section>
-        <section id="pricing">
+        <Separator className="h-px bg-gray-100" />
+        <section id="pricing" className="w-full bg-gradient-modern">
           <PricingSection />
         </section>
         <FaqSection />

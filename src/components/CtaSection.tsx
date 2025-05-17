@@ -1,12 +1,15 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { useLanguage } from '@/context/LanguageContext';
 
 const CtaSection = () => {
+  const { language } = useLanguage();
+  
   return (
-    <section className="py-16 px-4 bg-streamhib-blue text-white relative overflow-hidden">
+    <section className="py-16 px-4 bg-gradient-to-br from-streamhib-blue via-streamhib-blue to-streamhib-light-blue text-white relative overflow-hidden">
       {/* Visual elements in the background */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
+      <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-white/10"></div>
         <div className="absolute top-1/2 left-1/4 w-32 h-32 rounded-full bg-white/10"></div>
         <div className="absolute bottom-0 right-1/3 w-48 h-48 rounded-full bg-white/10"></div>
@@ -17,19 +20,20 @@ const CtaSection = () => {
       
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Siap Untuk Live Streaming 24/7?
+          {language === 'id' ? 'Siap Untuk Live Streaming 24/7?' : 'Ready For 24/7 Live Streaming?'}
         </h2>
-        <p className="text-xl md:text-2xl text-white/80 mb-8">
-          Tanpa perlu khawatir tentang koneksi internet atau perangkat yang panas.
-          <br />Biarkan StreamHib yang bekerja untuk kamu.
+        <p className="text-xl md:text-2xl text-white/90 mb-8">
+          {language === 'id' ? 
+            'Tanpa perlu khawatir tentang koneksi internet atau perangkat yang panas. Biarkan StreamHib yang bekerja untuk kamu.' : 
+            'No need to worry about internet connection or overheating devices. Let StreamHib work for you.'}
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button size="lg" className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg">
-            🎬 Coba Gratis Sekarang
+            🎬 {language === 'id' ? 'Coba Gratis Sekarang' : 'Try Free Now'}
           </Button>
-          <Button variant="outline" size="lg" className="bg-white text-streamhib-blue border-white hover:bg-white/90 hover:text-streamhib-blue/90 font-semibold text-lg">
-            🚀 Lihat Demo
+          <Button variant="outline" size="lg" className="bg-transparent text-white border-white hover:bg-white/20 hover:border-white font-semibold text-lg">
+            🚀 {language === 'id' ? 'Lihat Demo' : 'Watch Demo'}
           </Button>
         </div>
       </div>
