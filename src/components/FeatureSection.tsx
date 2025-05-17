@@ -41,15 +41,15 @@ const FeatureSection = () => {
                     {/* Status Boxes */}
                     <div className="flex gap-3 mb-4">
                       <div className="flex-1 h-16 bg-green-500 text-white rounded-lg flex flex-col items-center justify-center">
-                        <span className="text-2xl font-bold">11</span>
+                        <span className="text-2xl font-bold">57</span>
                         <span className="text-xs">Live</span>
                       </div>
                       <div className="flex-1 h-16 bg-yellow-500 text-white rounded-lg flex flex-col items-center justify-center">
-                        <span className="text-2xl font-bold">0</span>
+                        <span className="text-2xl font-bold">11</span>
                         <span className="text-xs">Dijadwal</span>
                       </div>
                       <div className="flex-1 h-16 bg-red-500 text-white rounded-lg flex flex-col items-center justify-center">
-                        <span className="text-2xl font-bold">2</span>
+                        <span className="text-2xl font-bold">7</span>
                         <span className="text-xs">Nonaktif</span>
                       </div>
                     </div>
