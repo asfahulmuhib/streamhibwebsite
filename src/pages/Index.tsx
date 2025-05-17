@@ -24,7 +24,7 @@ const Index = () => {
         </section>
         <Separator className="h-px bg-gray-100" />
         <section id="testimoni" className="w-full">
-          <TestimonialsSection language={language} />
+          <TestimonialsSection />
         </section>
         <Separator className="h-px bg-gray-100" />
         <section id="pricing" className="w-full bg-gradient-modern">

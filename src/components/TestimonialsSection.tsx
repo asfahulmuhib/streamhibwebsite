@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useLanguage } from '@/context/LanguageContext';
 
 const testimonials = [
   {
@@ -27,14 +28,12 @@ const testimonials = [
   }
 ];
 
-interface TestimonialsSectionProps {
-  language: string;
-}
-
-const TestimonialsSection = ({ language }: TestimonialsSectionProps) => {
+const TestimonialsSection = () => {
+  const { language } = useLanguage();
+  
   return (
     <section className="py-16 px-4 relative overflow-hidden bg-gradient-to-b from-blue-50/70 to-purple-50/50">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwYTNhNWYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiAwaDZ2LTZoLTZ2NnptLTYtNnY2aC02di02aDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwYTNhNWYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiAwaDF2LTZoLTZ2NmgtMXYtN2g4djd6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-streamhib-blue mb-4">
           {language === 'id' ? 'Pengguna Sudah Membuktikan' : 'Users Have Proven It'}
@@ -49,10 +48,10 @@ const TestimonialsSection = ({ language }: TestimonialsSectionProps) => {
         
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-blue-50/30 backdrop-blur-sm" style={{transitionDelay: `${index * 0.2}s`}}>
+            <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-blue-50/30 backdrop-blur-sm">
               <CardContent className="p-6 relative">
-                <div className="absolute top-4 right-4 text-5xl text-streamhib-red/10 font-serif">"</div>
-                <p className="text-lg text-gray-700 mb-6 relative z-10">
+                <div className="absolute top-2 right-4 text-7xl text-streamhib-red/30 font-serif">"</div>
+                <p className="text-lg font-bold text-gray-800 mb-6 relative z-10 italic">
                   {language === 'id' ? testimonial.quote : testimonial.quoteEn}
                 </p>
                 <div className="border-t border-gray-100 pt-4 flex items-center">
