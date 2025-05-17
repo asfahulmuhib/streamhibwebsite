@@ -33,9 +33,9 @@ const HeroSection = () => {
 
       <div className="max-w-[800px] mx-auto text-center space-y-6 animate-fade-in">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-  <span className="text-xl md:text-2xl font-semibold block mb-2 text-gradient">Bikin Live Jadi Cuan</span>
-  <span className="text-gradient">Live YouTube 24/7</span> <span className="text-streamhib-red">Tanpa Komputer</span>
-</h1>
+          <span className="text-xl md:text-2xl font-semibold block mb-2 text-gradient">Bikin Live Jadi Cuan</span>
+          <span className="text-gradient">Live YouTube 24/7</span> <span className="text-streamhib-red">Tanpa Komputer</span>
+        </h1>
         <h2 className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
           StreamHib bantu kamu live video nonstop, langsung dari server. 
           <span className="font-semibold block mt-2">Tanpa install, tanpa takut mati sendiri. Setting 1x, live terus!</span>
@@ -53,9 +53,9 @@ const HeroSection = () => {
             onClick={handleWhatsAppClick}
             variant="outline"
             size="lg"
-            className="border-streamhib-blue text-streamhib-blue hover:bg-streamhib-blue/10 font-semibold text-lg shadow-sm"
+            className="border-[#25D366] text-[#25D366] hover:bg-[#128C7E]/10 font-semibold text-lg shadow-sm"
           >
-            <MessageCircle className="h-5 w-5 mr-2" /> Pesan Lewat Whatsapp
+            <MessageCircle className="h-5 w-5 mr-2" /> Pesan Via Whatsapp
           </Button>
         </div>
       </div>
