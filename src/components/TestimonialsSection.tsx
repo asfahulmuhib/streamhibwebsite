@@ -9,22 +9,22 @@ const testimonials = [
     quote: "Sudah 3 minggu live nonstop, mantap banget!",
     quoteEn: "It's been live nonstop for 3 weeks, really awesome!",
     author: "Rina.",
-    channel: "Music Therapy",
+    channel: "Banjarmasin, KalSel",
     image: "/lovable-uploads/rina.jpg"
   },
   {
     quote: "Pernah pakai layanan lain, 2 hari mati. Pindah ke StreamHib, lancar!",
     quoteEn: "I used [competitor] before, it died after 2 days. Switched to StreamHib, and it's smooth!",
     author: "Budi S.",
-    channel: "Relax Zone",
-    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843"
+    channel: "Trenggalek, Jawa Timur",
+    image: "/lovable-uploads/budi.jpg"
   },
   {
     quote: "Cuma modal HP dan dashboard ini, live terus jalan.",
     quoteEn: "With just a phone and this dashboard, my stream keeps going.",
-    author: "Dewi R.",
-    channel: "ASMR Indonesia",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+    author: "Belum ada",
+    channel: "Indonesia",
+    image: "#"
   }
 ];
 
