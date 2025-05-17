@@ -48,7 +48,7 @@ const HeroSection = () => {
     </Button>
   </a>
   <a
-    href="https://wa.me/6285722165165" // Replace with your WhatsApp link
+    href="https://wa.me/6285722165165?text=Kak%20aku%20ingin%20pesan%20streamhib%2C%20transfer%20kemana%3F" // Replace with your WhatsApp link
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -62,7 +62,7 @@ const HeroSection = () => {
         alt="WhatsApp Logo"
         className="w-5 h-5 mr-2" // Adjust size and spacing as needed
       />
-      Mulai Live Hari Ini
+      Pesan Lewat Whatsapp
     </Button>
   </a>
 </div>
