@@ -59,9 +59,9 @@ const PricingSection = () => {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex justify-center">
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-streamhib-red hover:bg-streamhib-red/90">
+                <Button className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90">
                   Pesan Sekarang
                 </Button>
               </a>
@@ -116,9 +116,9 @@ const PricingSection = () => {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex justify-center">
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-streamhib-blue hover:bg-streamhib-blue/90">
+                <Button className="w-full max-w-xs bg-streamhib-blue hover:bg-streamhib-blue/90">
                   🚀 Pesan Sekarang
                 </Button>
               </a>
@@ -170,9 +170,9 @@ const PricingSection = () => {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex justify-center">
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-streamhib-red hover:bg-streamhib-red/90">
+                <Button className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90">
                   🎯 Pesan Sekarang
                 </Button>
               </a>
@@ -185,7 +185,7 @@ const PricingSection = () => {
             Pemesanan bisa juga langsung transfer sesuai nominal Harga yang tertera ke Rekening Seabank
             <br /> <span className="font-semibold">901872537380</span>
             <br /> a/n <span className="font-semibold">Asfahul Muhib</span>
-            <br /> Kemudian silahkan kirim bukti transfer ke <a href="https://wa.me/6285722165165?text=Halo%20kak%2C%20Saya%20mau%20konfirmasi%20pemesanan%20dan%20berikut%20ini%20bukti%20Transfernya.." target="_blank" rel="noopener noreferrer">Whatsapp</a> atau <a href="https://t.me/streamhib" target="_blank" rel="noopener noreferrer">Telegram</a> StreamHib.
+            <br /> Kemudian silahkan kirim bukti transfer ke <a href="https://wa.me/6285722165165?text=Halo%20kak%2C%20Saya%20mau%20konfirmasi%20pemesanan%20dan%20berikut%20ini%20bukti%20Transfernya.." target="_blank" rel="noopener noreferrer"><span className="font-semibold">Whatsapp</span></a> atau <a href="https://t.me/streamhib" target="_blank" rel="noopener noreferrer"><span className="font-semibold">Telegram</span></a> StreamHib.
             <br />Bisa langsung aktif hari ini!
           </p>
         </div>
