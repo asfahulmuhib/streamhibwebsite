@@ -48,7 +48,7 @@ const HeroSection = () => {
     </Button>
   </a>
   <a
-    href="https://wa.me/yourphonenumber" // Replace with your WhatsApp link
+    href="https://wa.me/6285722165165" // Replace with your WhatsApp link
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -58,7 +58,7 @@ const HeroSection = () => {
       className="border-streamhib-blue text-streamhib-blue hover:bg-streamhib-blue/10 font-semibold text-lg shadow-sm"
     >
       <img
-        src="/path/to/whatsapp-logo.png" // Replace with the path to your WhatsApp logo image
+        src="/lovable-uploads/whatsapplogo.png" // Replace with the path to your WhatsApp logo image
         alt="WhatsApp Logo"
         className="w-5 h-5 mr-2" // Adjust size and spacing as needed
       />
