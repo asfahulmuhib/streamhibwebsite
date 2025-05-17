@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { MessageCircle, Send } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const CtaSection = () => {
@@ -37,19 +38,18 @@ const CtaSection = () => {
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button 
-            size="lg" 
-            className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg"
             onClick={handleWhatsAppClick}
+            className="bg-[#25D366] hover:bg-[#128C7E] rounded-full py-6 px-8 font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center text-white"
           >
-            🎬 {language === 'id' ? 'Coba Gratis Sekarang' : 'Try Free Now'}
+            <MessageCircle className="h-5 w-5 mr-2" /> 
+            {language === 'id' ? 'Pesan via WhatsApp' : 'Message via WhatsApp'}
           </Button>
           <Button 
-            variant="outline" 
-            size="lg" 
-            className="bg-white/20 text-white border-white hover:bg-white/30 hover:border-white font-semibold text-lg"
             onClick={handleTelegramClick}
+            className="bg-[#0088cc] hover:bg-[#0077b5] rounded-full py-6 px-8 font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center text-white"
           >
-            🚀 {language === 'id' ? 'Lihat Demo' : 'Watch Demo'}
+            <Send className="h-5 w-5 mr-2" /> 
+            {language === 'id' ? 'Pesan via Telegram' : 'Message via Telegram'}
           </Button>
         </div>
       </div>
