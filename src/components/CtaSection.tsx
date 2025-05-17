@@ -4,6 +4,14 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const CtaSection = () => {
   const { language } = useLanguage();
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/6285722165165?text=Saya%20mau%20pesen%2C%20Kak%2C%20Transfer%20kemana%3F", "_blank", "noopener,noreferrer");
+  };
+
+  const handleTelegramClick = () => {
+    window.open("https://t.me/streamhib", "_blank", "noopener,noreferrer");
+  };
   
   return (
     <section className="py-16 px-4 bg-gradient-to-br from-streamhib-blue via-streamhib-blue to-streamhib-light-blue text-white relative overflow-hidden">
@@ -28,24 +36,21 @@ const CtaSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a
-            href="https://wa.me/6285722165165?text=Saya%20mau%20pesen%2C%20Kak%2C%20Transfer%20kemana%3F"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Button 
+            size="lg" 
+            className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg"
+            onClick={handleWhatsAppClick}
           >
-            <Button size="lg" className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg">
-              🎬 {language === 'id' ? 'Coba Gratis Sekarang' : 'Try Free Now'}
-            </Button>
-          </a>
-          <a
-            href="https://t.me/streamhib"
-            target="_blank"
-            rel="noopener noreferrer"
+            🎬 {language === 'id' ? 'Coba Gratis Sekarang' : 'Try Free Now'}
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="bg-white/20 text-white border-white hover:bg-white/30 hover:border-white font-semibold text-lg"
+            onClick={handleTelegramClick}
           >
-            <Button variant="outline" size="lg" className="bg-white/20 text-white border-white hover:bg-white/30 hover:border-white font-semibold text-lg">
-              🚀 {language === 'id' ? 'Lihat Demo' : 'Watch Demo'}
-            </Button>
-          </a>
+            🚀 {language === 'id' ? 'Lihat Demo' : 'Watch Demo'}
+          </Button>
         </div>
       </div>
     </section>
