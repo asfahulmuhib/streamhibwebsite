@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '@/context/LanguageContext';
@@ -29,12 +28,24 @@ const CtaSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button size="lg" className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg">
-            🎬 {language === 'id' ? 'Coba Gratis Sekarang' : 'Try Free Now'}
-          </Button>
-          <Button variant="outline" size="lg" className="bg-white/20 text-white border-white hover:bg-white/30 hover:border-white font-semibold text-lg">
-            🚀 {language === 'id' ? 'Lihat Demo' : 'Watch Demo'}
-          </Button>
+          <a
+            href="https://wa.me/6285722165165?text=Saya%20mau%20pesen%2C%20Kak%2C%20Transfer%20kemana%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg">
+              🎬 {language === 'id' ? 'Coba Gratis Sekarang' : 'Try Free Now'}
+            </Button>
+          </a>
+          <a
+            href="https://t.me/streamhib"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" size="lg" className="bg-white/20 text-white border-white hover:bg-white/30 hover:border-white font-semibold text-lg">
+              🚀 {language === 'id' ? 'Lihat Demo' : 'Watch Demo'}
+            </Button>
+          </a>
         </div>
       </div>
     </section>
