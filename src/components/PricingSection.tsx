@@ -25,11 +25,7 @@ const PricingSection = () => {
               </div>
             </CardHeader>
             <CardContent className="pt-4 pb-6">
-              <ul className="text-left space-y-2">
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Bisa Untuk Banyak Channel Youtube</span>
-                </li>
+              <ul className="text-left space-y-2">                
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
                   <span>10 Live, Res 720p, FPS 30, Bit 2500</span>
@@ -58,6 +54,10 @@ const PricingSection = () => {
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
                   <span>Penyimpanan 60GB</span>
                 </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Support Banyak Channel Youtube</span>
+                </li>
               </ul>
             </CardContent>
             <CardFooter>
@@ -73,9 +73,9 @@ const PricingSection = () => {
               POPULER
             </div>
             <CardHeader className="pb-2">
-              <h3 className="text-xl font-bold">Pro</h3>
+              <h3 className="text-xl font-bold">Set 2</h3>
               <div className="mt-4">
-                <span className="text-4xl font-bold">Rp199k</span>
+                <span className="text-4xl font-bold">Rp250k</span>
                 <span className="text-gray-500 ml-1">/bulan</span>
               </div>
             </CardHeader>
@@ -83,29 +83,41 @@ const PricingSection = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>3 channel YouTube</span>
+                  <span>25 Live, Res 720p, FPS 30, Bit 2500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>50 jam video storage</span>
+                  <span>17 Live, Res 1080p, FPS 30, Bit 6500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Jadwal otomatis</span>
+                  <span>8 Live, Res 4k, FPS 30, Bit 12000</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Resolusi up to 1080p</span>
+                  <span>Support YouTube & Facebook</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Chat overlay</span>
+                  <span>Fitur Penjadwalan Youtube</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Lebih Stabil & IP Tidak Berubah-ubah</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Penyimpanan 40GB</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Support Banyak Channel Youtube</span>
                 </li>
               </ul>
             </CardContent>
             <CardFooter>
               <Button className="w-full bg-streamhib-blue hover:bg-streamhib-blue/90">
-                🚀 Mulai Sekarang
+                🚀 Pesan Sekarang
               </Button>
             </CardFooter>
           </Card>
@@ -113,9 +125,9 @@ const PricingSection = () => {
           {/* Business Plan */}
           <Card className="border-streamhib-blue/20 hover:shadow-lg transition-shadow duration-300">
             <CardHeader className="pb-2">
-              <h3 className="text-xl font-bold">Business</h3>
+              <h3 className="text-xl font-bold">Set 3</h3>
               <div className="mt-4">
-                <span className="text-4xl font-bold">Rp399k</span>
+                <span className="text-4xl font-bold">Rp350k</span>
                 <span className="text-gray-500 ml-1">/bulan</span>
               </div>
             </CardHeader>
@@ -123,29 +135,41 @@ const PricingSection = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>10 channel YouTube</span>
+                  <span>52 Live, Res 720p, FPS 30, Bit 2500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>200 jam video storage</span>
+                  <span>33 Live, Res 1080p, FPS 30, Bit 6500</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Jadwal otomatis</span>
+                  <span>14 Live, Res 4k, FPS 30, Bit 12000</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Resolusi up to 4K</span>
+                  <span>Support YouTube & Facebook</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Prioritas support</span>
+                  <span>Fitur Penjadwalan Youtube</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Lebih Stabil & IP Tidak Berubah-ubah</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Penyimpanan 80GB</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                  <span>Support Banyak Channel Youtube</span>
                 </li>
               </ul>
             </CardContent>
             <CardFooter>
               <Button className="w-full bg-streamhib-red hover:bg-streamhib-red/90">
-                🎯 Hubungi Tim Sales
+                🎯 Pesan Sekarang
               </Button>
             </CardFooter>
           </Card>
@@ -153,7 +177,10 @@ const PricingSection = () => {
         
         <div className="mt-8 bg-gray-50 rounded-lg p-6 max-w-3xl mx-auto">
           <p className="text-center text-gray-600">
-            Semua paket termasuk <span className="font-semibold">coba gratis 7 hari</span> tanpa kartu kredit.
+            Pemesanan bisa juga langsung Transer sesuai nominal harga yang tertera ke Rekening Seabank
+            <br /> 901872537380
+            <br /> A/N Asfahul Muhib
+            <br /> Kemudian silahkan kirim bukti transfer ke <span className="font-semibold">Whatsapp atau Telegram</span> StreamHib.
             <br />Bisa langsung aktif hari ini!
           </p>
         </div>
