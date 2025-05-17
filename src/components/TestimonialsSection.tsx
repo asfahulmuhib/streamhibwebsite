@@ -9,7 +9,7 @@ const testimonials = [
     quote: "Sudah 3 minggu live nonstop, mantap banget!",
     quoteEn: "It's been live nonstop for 3 weeks, really awesome!",
     author: "Rina.",
-    channel: "Banjarmasin, KalSel",
+    channel: "Banjarmasin, Kalimantan Selatan",
     image: "/lovable-uploads/rina.jpg"
   },
   {
