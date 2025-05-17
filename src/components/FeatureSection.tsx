@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -38,32 +37,47 @@ const FeatureSection = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="flex h-[calc(100%-3rem)]">
-                    {/* Sidebar */}
-                    <div className="w-1/4 bg-gray-100 p-4">
-                      <div className="h-8 w-full bg-white rounded mb-4 animate-pulse"></div>
-                      <div className="h-6 w-full bg-white rounded mb-3 animate-pulse"></div>
-                      <div className="h-6 w-full bg-white rounded mb-3 animate-pulse"></div>
-                      <div className="h-6 w-full bg-white rounded mb-3 animate-pulse"></div>
-                      <div className="h-6 w-full bg-white rounded mb-3 animate-pulse"></div>
+                  <div className="p-4 h-[calc(100%-3rem)] flex flex-col">
+                    {/* Status Boxes */}
+                    <div className="flex gap-3 mb-4">
+                      <div className="flex-1 h-16 bg-green-500 text-white rounded-lg flex flex-col items-center justify-center">
+                        <span className="text-2xl font-bold">11</span>
+                        <span className="text-xs">Live</span>
+                      </div>
+                      <div className="flex-1 h-16 bg-yellow-500 text-white rounded-lg flex flex-col items-center justify-center">
+                        <span className="text-2xl font-bold">0</span>
+                        <span className="text-xs">Dijadwal</span>
+                      </div>
+                      <div className="flex-1 h-16 bg-red-500 text-white rounded-lg flex flex-col items-center justify-center">
+                        <span className="text-2xl font-bold">2</span>
+                        <span className="text-xs">Nonaktif</span>
+                      </div>
                     </div>
-                    
-                    {/* Main Content */}
-                    <div className="w-3/4 p-4">
-                      <div className="h-10 w-3/4 bg-gray-100 rounded mb-6 animate-pulse"></div>
-                      <div className="flex gap-4 mb-6">
-                        <div className="h-24 w-1/3 bg-gray-100 rounded animate-pulse"></div>
-                        <div className="h-24 w-1/3 bg-gray-100 rounded animate-pulse"></div>
-                        <div className="h-24 w-1/3 bg-gray-100 rounded animate-pulse"></div>
+
+                    {/* Download Video Section */}
+                    <div className="mb-4">
+                      <div className="text-sm font-medium text-gray-700 mb-2">1. Download Video dari GDrive</div>
+                      <div className="flex gap-2">
+                        <div className="flex-1 h-10 bg-gray-200 rounded-lg animate-pulse"></div>
+                        <div className="w-1/4 h-10 bg-blue-500 rounded-lg animate-pulse"></div>
                       </div>
-                      <div className="h-40 w-full bg-streamhib-red/20 rounded flex items-center justify-center">
-                        <div className="w-12 h-12 rounded-full bg-streamhib-red flex items-center justify-center">
-                          <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></div>
-                        </div>
+                    </div>
+
+                    {/* Manager Video Section */}
+                    <div className="flex-1">
+                      <div className="text-sm font-medium text-gray-700 mb-2">2. Manajer Video</div>
+                      <div className="flex gap-2 mb-2">
+                        <div className="flex-1 h-10 bg-gray-200 rounded-lg animate-pulse"></div>
                       </div>
-                      <div className="flex gap-2 mt-4">
-                        <div className="h-8 w-1/4 rounded bg-streamhib-blue animate-pulse"></div>
-                        <div className="h-8 w-1/4 rounded bg-gray-200"></div>
+                      <div className="flex gap-2">
+                        <div className="w-1/3 h-10 bg-yellow-500 rounded-lg animate-pulse"></div>
+                        <div className="w-1/3 h-10 bg-red-500 rounded-lg animate-pulse"></div>
+                        <div className="w-1/3 h-10 bg-red-600 rounded-lg animate-pulse"></div>
+                      </div>
+                      <div className="mt-2 text-xs text-gray-500">
+                        <div>Status Disk: Normal</div>
+                        <div>Total: 37.24 GB</div>
+                        <div>Terpakai: 3.78 GB</div>
                       </div>
                     </div>
                   </div>
