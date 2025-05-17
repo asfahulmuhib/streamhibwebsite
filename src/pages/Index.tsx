@@ -8,8 +8,11 @@ import PricingSection from '@/components/PricingSection';
 import FaqSection from '@/components/FaqSection';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Index = () => {
+  const { language } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-streamhib-blue/5 via-blue-50/50 to-streamhib-red/5">
       <Header />
@@ -19,7 +22,7 @@ const Index = () => {
           <FeatureSection />
         </section>
         <section id="testimoni">
-          <TestimonialsSection />
+          <TestimonialsSection language={language} />
         </section>
         <section id="pricing">
           <PricingSection />

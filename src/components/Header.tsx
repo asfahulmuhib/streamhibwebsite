@@ -4,8 +4,12 @@ import Logo from './Logo';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
+import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Header = () => {
+  const { language } = useLanguage();
+
   return (
     <header className="w-full py-4 px-4 md:px-6 flex items-center justify-between z-10 sticky top-0 glass-effect">
       <Logo />
@@ -15,33 +19,35 @@ const Header = () => {
           <NavigationMenuItem>
             <Link to="/">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
+                {language === 'id' ? 'Home' : 'Home'}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to="/#fitur">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Fitur
+                {language === 'id' ? 'Fitur' : 'Features'}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to="/#testimoni">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Testimoni
+                {language === 'id' ? 'Testimoni' : 'Testimonials'}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to="/#pricing">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Paket
+                {language === 'id' ? 'Paket' : 'Pricing'}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      
+      <LanguageSwitcher />
     </header>
   );
 };
