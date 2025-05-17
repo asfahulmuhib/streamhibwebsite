@@ -8,12 +8,12 @@ const testimonials = [
   {
     quote: "Sudah 3 minggu live nonstop, mantap banget!",
     quoteEn: "It's been live nonstop for 3 weeks, really awesome!",
-    author: "Ahmad K.",
+    author: "Rina.",
     channel: "Music Therapy",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+    image: "/lovable-uploads/rina.jpg"
   },
   {
-    quote: "Pernah pakai [kompetitor], 2 hari mati. Pindah ke StreamHib, lancar!",
+    quote: "Pernah pakai layanan lain, 2 hari mati. Pindah ke StreamHib, lancar!",
     quoteEn: "I used [competitor] before, it died after 2 days. Switched to StreamHib, and it's smooth!",
     author: "Budi S.",
     channel: "Relax Zone",
