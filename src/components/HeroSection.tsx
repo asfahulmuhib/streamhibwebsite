@@ -1,14 +1,40 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Play, MessageCircle } from "lucide-react";
+import { useLanguage } from '@/context/LanguageContext';
 
 const HeroSection = () => {
+  const { language } = useLanguage();
+
   const handleTryNowClick = () => {
     window.open("http://emuhib.com", "_blank", "noopener,noreferrer");
   };
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/6285722165165?text=Kak%20aku%20ingin%20pesan%20streamhib%2C%20transfer%20kemana%3F", "_blank", "noopener,noreferrer");
+  };
+
+  const translations = {
+    id: {
+      liveIndicator: 'LIVE',
+      title1: 'Bikin Live Jadi Cuan',
+      title2: 'Live YouTube 24/7',
+      title3: 'Tanpa Komputer',
+      subtitle1: 'StreamHib bantu kamu live video nonstop, langsung dari server.',
+      subtitle2: 'Tanpa install, tanpa takut mati sendiri. Setting 1x, live terus!',
+      tryNow: 'Coba Gratis Sekarang',
+      whatsapp: 'Pesan Via Whatsapp',
+    },
+    en: {
+      liveIndicator: 'LIVE',
+      title1: 'Turn Live Into Profit',
+      title2: '24/7 YouTube Live',
+      title3: 'No Computer Needed',
+      subtitle1: 'StreamHib helps you stream videos non-stop, directly from the server.',
+      subtitle2: 'No installation, no fear of crashing. Set it once, stream forever!',
+      tryNow: 'Try Free Now',
+      whatsapp: 'Message via Whatsapp',
+    },
   };
 
   return (
@@ -28,17 +54,17 @@ const HeroSection = () => {
       {/* Live Indicator */}
       <div className="absolute top-4 right-4 md:top-8 md:right-8 flex items-center gap-2 bg-black/80 text-white py-1 px-3 rounded-full">
         <div className="h-2 w-2 bg-red-500 rounded-full animate-live-dot"></div>
-        <span className="text-xs font-semibold">LIVE</span>
+        <span className="text-xs font-semibold">{translations[language].liveIndicator}</span>
       </div>
 
       <div className="max-w-[800px] mx-auto text-center space-y-6 animate-fade-in">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-          <span className="text-xl md:text-2xl font-semibold block mb-2 text-gradient">Bikin Live Jadi Cuan</span>
-          <span className="text-gradient">Live YouTube 24/7</span> <span className="text-streamhib-red">Tanpa Komputer</span>
+          <span className="text-xl md:text-2xl font-semibold block mb-2 text-gradient">{translations[language].title1}</span>
+          <span className="text-gradient">{translations[language].title2}</span> <span className="text-streamhib-red">{translations[language].title3}</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
-          StreamHib bantu kamu live video nonstop, langsung dari server. 
-          <span className="font-semibold block mt-2">Tanpa install, tanpa takut mati sendiri. Setting 1x, live terus!</span>
+          {translations[language].subtitle1}
+          <span className="font-semibold block mt-2">{translations[language].subtitle2}</span>
         </h2>
 
         <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,14 +73,14 @@ const HeroSection = () => {
             size="lg"
             className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg"
           >
-            <Play className="h-5 w-5 mr-2" /> Coba Gratis Sekarang
+            <Play className="h-5 w-5 mr-2" /> {translations[language].tryNow}
           </Button>
           <Button
             onClick={handleWhatsAppClick}
             size="lg"
             className="bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold text-lg shadow-sm"
           >
-            <MessageCircle className="h-5 w-5 mr-2" /> Pesan Via Whatsapp
+            <MessageCircle className="h-5 w-5 mr-2" /> {translations[language].whatsapp}
           </Button>
         </div>
       </div>
