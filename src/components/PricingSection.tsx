@@ -7,8 +7,9 @@ import { useLanguage } from '@/context/LanguageContext';
 const PricingSection = () => {
   const { language } = useLanguage();
 
-  const handleSubscribeClick = () => {
-    window.open("#", "_blank", "noopener,noreferrer"); // Placeholder URL
+  // Fungsi handleSubscribeClick yang menerima parameter url
+  const handleSubscribeClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   const translations = {
@@ -58,7 +59,7 @@ const PricingSection = () => {
       title: 'Start 24/7 Streaming Today',
       subtitle: 'Choose a package that suits your needs. All packages come with the same features and full technical support.',
       plans: ['Plan 1', 'Plan 2', 'Plan 3'],
-      prices: ['$13', '$16', '$22'], // Contoh konversi, sesuaikan jika perlu
+      prices: ['$5', '$6', '$9'], // Contoh konversi, sesuaikan jika perlu
       subscribe: 'Start Subscription',
       paymentInfo: 'You can also make a direct transfer according to the listed price to Seabank Account',
       account: '901872537380 a/n Asfahul Muhib',
@@ -98,6 +99,13 @@ const PricingSection = () => {
     },
   };
 
+  // URL untuk setiap paket
+  const subscriptionLinks = {
+    basic: "https://wa.me/6285722165165?text=Halo%20kak%2C%20saya%20ingin%20berlangganan%20paket%20Set%201%20(Rp200k/bulan)%2C%20bagaimana%20caranya%3F",
+    pro: "https://wa.me/6285722165165?text=Halo%20kak%2C%20saya%20ingin%20berlangganan%20paket%20Set%202%20(Rp250k/bulan)%2C%20bagaimana%20caranya%3F",
+    business: "https://wa.me/6285722165165?text=Halo%20kak%2C%20saya%20ingin%20berlangganan%20paket%20Set%203%20(Rp350k/bulan)%2C%20bagaimana%20caranya%3F",
+  };
+
   return (
     <section id="pricing" className="py-16 md:py-24 px-4">
       <div className="max-w-5xl mx-auto text-center">
@@ -130,7 +138,7 @@ const PricingSection = () => {
             </CardContent>
             <CardFooter className="flex justify-center">
               <Button
-                onClick={handleSubscribeClick}
+                onClick={() => handleSubscribeClick(subscriptionLinks.basic)}
                 className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
@@ -162,7 +170,7 @@ const PricingSection = () => {
             </CardContent>
             <CardFooter className="flex justify-center">
               <Button
-                onClick={handleSubscribeClick}
+                onClick={() => handleSubscribeClick(subscriptionLinks.pro)}
                 className="w-full max-w-xs bg-streamhib-blue hover:bg-streamhib-blue/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
@@ -191,7 +199,7 @@ const PricingSection = () => {
             </CardContent>
             <CardFooter className="flex justify-center">
               <Button
-                onClick={handleSubscribeClick}
+                onClick={() => handleSubscribeClick(subscriptionLinks.business)}
                 className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
