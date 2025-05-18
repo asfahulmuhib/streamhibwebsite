@@ -57,7 +57,7 @@ const PricingSection: React.FC = () => {
       prices: ['$13', '$16', '$22'],
       subscribe: 'Start Subscription',
       paymentInfo: 'You can make a direct transfer according to the listed price to Seabank Account. For international customers, we also accept Binance Pay.',
-      account: '901872537380 a/n Asfahul Muhib | Binance ID: 89893460',,
+      account: '901872537380 a/n Asfahul Muhib | Binance ID: 89893460',
       confirmation: 'Then please send the transfer or transaction proof (Binance Pay) to',
       activeToday: 'Can be activated today!',
       basicFeatures: [
