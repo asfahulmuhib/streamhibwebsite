@@ -7,7 +7,7 @@ const HeroSection = () => {
   const { language } = useLanguage();
 
   const handleTryNowClick = () => {
-    window.open("http://emuhib.com", "_blank", "noopener,noreferrer");
+    window.open("#", "_blank", "noopener,noreferrer");
   };
 
   const handleWhatsAppClick = () => {
@@ -22,7 +22,7 @@ const HeroSection = () => {
       title3: 'Tanpa Komputer',
       subtitle1: 'StreamHib bantu kamu live video nonstop, langsung dari server.',
       subtitle2: 'Tanpa install, tanpa takut mati sendiri. Setting 1x, live terus!',
-      tryNow: 'Coba Gratis Sekarang',
+      tryNow: 'Coba Trial Gratis',
       whatsapp: 'Pesan Via Whatsapp',
     },
     en: {
@@ -32,7 +32,7 @@ const HeroSection = () => {
       title3: 'No Computer Needed',
       subtitle1: 'StreamHib helps you stream videos non-stop, directly from the server.',
       subtitle2: 'No installation, no fear of crashing. Set it once, stream forever!',
-      tryNow: 'Try Free Now',
+      tryNow: 'Try Free Trial',
       whatsapp: 'Message via Whatsapp',
     },
   };
