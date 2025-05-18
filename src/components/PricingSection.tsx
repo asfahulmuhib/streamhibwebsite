@@ -2,30 +2,58 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Play } from "lucide-react";
+import { useLanguage } from '@/context/LanguageContext';
 
 const PricingSection = () => {
+  const { language } = useLanguage();
+
   const handleSubscribeClick = () => {
-    window.open("#", "_blank", "noopener,noreferrer"); // Placeholder URL, ganti dengan link nyata
+    window.open("#", "_blank", "noopener,noreferrer"); // Placeholder URL
+  };
+
+  const translations = {
+    id: {
+      title: 'Mulai Streaming 24/7 Hari Ini',
+      subtitle: 'Pilih paket yang sesuai dengan kebutuhan Anda. Semua paket dilengkapi dengan fitur yang sama dan dukungan teknis penuh.',
+      plans: ['Set 1', 'Set 2', 'Set 3'],
+      prices: ['Rp200k', 'Rp250k', 'Rp350k'],
+      subscribe: 'Mulai Langganan',
+      paymentInfo: 'Pemesanan bisa juga langsung transfer sesuai nominal Harga yang tertera ke Rekening Seabank',
+      account: '901872537380 a/n Asfahul Muhib',
+      confirmation: 'Kemudian silahkan kirim bukti transfer ke',
+      activeToday: 'Bisa langsung aktif hari ini!',
+    },
+    en: {
+      title: 'Start 24/7 Streaming Today',
+      subtitle: 'Choose a package that suits your needs. All packages come with the same features and full technical support.',
+      plans: ['Plan 1', 'Plan 2', 'Plan 3'],
+      prices: ['$5', '$6', '$9'], // Contoh konversi, sesuaikan jika perlu
+      subscribe: 'Start Subscription',
+      paymentInfo: 'You can also make a direct transfer according to the listed price to Seabank Account',
+      account: '901872537380 a/n Asfahul Muhib',
+      confirmation: 'Then please send the transfer proof to',
+      activeToday: 'Can be activated today!',
+    },
   };
 
   return (
     <section id="pricing" className="py-16 md:py-24 px-4">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-streamhib-blue mb-4">
-          Mulai Streaming 24/7 Hari Ini
+          {translations[language].title}
         </h2>
         <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-          Pilih paket yang sesuai dengan kebutuhan Anda. Semua paket dilengkapi dengan fitur yang sama dan dukungan teknis penuh.
+          {translations[language].subtitle}
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
           {/* Basic Plan */}
           <Card className="border-streamhib-blue/20 hover:shadow-lg transition-shadow duration-300">
             <CardHeader className="pb-2">
-              <h3 className="text-xl font-bold">Set 1</h3>
+              <h3 className="text-xl font-bold">{translations[language].plans[0]}</h3>
               <div className="mt-4">
-                <span className="text-4xl font-bold">Rp200k</span>
-                <span className="text-gray-500 ml-1">/bulan</span>
+                <span className="text-4xl font-bold">{translations[language].prices[0]}</span>
+                <span className="text-gray-500 ml-1">/month</span>
               </div>
             </CardHeader>
             <CardContent className="pt-4 pb-6">
@@ -69,7 +97,7 @@ const PricingSection = () => {
                 onClick={handleSubscribeClick}
                 className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
               >
-                <Play className="h-5 w-5 mr-2" /> Mulai Langganan
+                <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
               </Button>
             </CardFooter>
           </Card>
@@ -80,10 +108,10 @@ const PricingSection = () => {
               POPULER
             </div>
             <CardHeader className="pb-2">
-              <h3 className="text-xl font-bold">Set 2</h3>
+              <h3 className="text-xl font-bold">{translations[language].plans[1]}</h3>
               <div className="mt-4">
-                <span className="text-4xl font-bold">Rp250k</span>
-                <span className="text-gray-500 ml-1">/bulan</span>
+                <span className="text-4xl font-bold">{translations[language].prices[1]}</span>
+                <span className="text-gray-500 ml-1">/month</span>
               </div>
             </CardHeader>
             <CardContent className="pt-4 pb-6">
@@ -127,7 +155,7 @@ const PricingSection = () => {
                 onClick={handleSubscribeClick}
                 className="w-full max-w-xs bg-streamhib-blue hover:bg-streamhib-blue/90"
               >
-                <Play className="h-5 w-5 mr-2" /> Mulai Langganan
+                <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
               </Button>
             </CardFooter>
           </Card>
@@ -135,10 +163,10 @@ const PricingSection = () => {
           {/* Business Plan */}
           <Card className="border-streamhib-blue/20 hover:shadow-lg transition-shadow duration-300">
             <CardHeader className="pb-2">
-              <h3 className="text-xl font-bold">Set 3</h3>
+              <h3 className="text-xl font-bold">{translations[language].plans[2]}</h3>
               <div className="mt-4">
-                <span className="text-4xl font-bold">Rp350k</span>
-                <span className="text-gray-500 ml-1">/bulan</span>
+                <span className="text-4xl font-bold">{translations[language].prices[2]}</span>
+                <span className="text-gray-500 ml-1">/month</span>
               </div>
             </CardHeader>
             <CardContent className="pt-4 pb-6">
@@ -182,7 +210,7 @@ const PricingSection = () => {
                 onClick={handleSubscribeClick}
                 className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
               >
-                <Play className="h-5 w-5 mr-2" /> Mulai Langganan
+                <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
               </Button>
             </CardFooter>
           </Card>
@@ -190,11 +218,10 @@ const PricingSection = () => {
         
         <div className="mt-8 bg-gray-50 rounded-lg p-6 max-w-3xl mx-auto">
           <p className="text-center text-gray-600">
-            Pemesanan bisa juga langsung transfer sesuai nominal Harga yang tertera ke Rekening Seabank
-            <br /> <span className="font-semibold">901872537380</span>
-            <br /> a/n <span className="font-semibold">Asfahul Muhib</span>
-            <br /> Kemudian silahkan kirim bukti transfer ke <a href="https://wa.me/6285722165165?text=Halo%20kak%2C%20Saya%20mau%20konfirmasi%20pemesanan%20dan%20berikut%20ini%20bukti%20Transfernya.." target="_blank" rel="noopener noreferrer"><span className="font-semibold text-[#128C7E]">Whatsapp</span></a> atau <a href="https://t.me/streamhib" target="_blank" rel="noopener noreferrer"><span className="font-semibold text-[#1E90FF]">Telegram</span></a> StreamHib.
-            <br />Bisa langsung aktif hari ini!
+            {translations[language].paymentInfo}
+            <br /> <span className="font-semibold">{translations[language].account}</span>
+            <br /> {translations[language].confirmation} <a href="https://wa.me/6285722165165?text=Halo%20kak%2C%20Saya%20mau%20konfirmasi%20pemesanan%20dan%20berikut%20ini%20bukti%20Transfernya.." target="_blank" rel="noopener noreferrer"><span className="font-semibold text-[#128C7E]">Whatsapp</span></a> atau <a href="https://t.me/streamhib" target="_blank" rel="noopener noreferrer"><span className="font-semibold text-[#1E90FF]">Telegram</span></a> StreamHib.
+            <br />{translations[language].activeToday}
           </p>
         </div>
       </div>
