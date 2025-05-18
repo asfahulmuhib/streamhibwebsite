@@ -58,7 +58,7 @@ const PricingSection = () => {
       title: 'Start 24/7 Streaming Today',
       subtitle: 'Choose a package that suits your needs. All packages come with the same features and full technical support.',
       plans: ['Plan 1', 'Plan 2', 'Plan 3'],
-      prices: ['$5', '$6', '$9'], // Contoh konversi, sesuaikan jika perlu
+      prices: ['$13', '$16', '$22'], // Contoh konversi, sesuaikan jika perlu
       subscribe: 'Start Subscription',
       paymentInfo: 'You can also make a direct transfer according to the listed price to Seabank Account',
       account: '901872537380 a/n Asfahul Muhib',
