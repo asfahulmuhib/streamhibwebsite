@@ -12,7 +12,7 @@ const PricingSection: React.FC = () => {
   const mayarProRef = useRef<HTMLAnchorElement>(null);
   const mayarBusinessRef = useRef<HTMLAnchorElement>(null);
 
-  // Memuat skrip Mayar dan styling kustom untuk menyembunyikan logo
+  // Memuat skrip Mayar dan styling kustom untuk memperkecil logo
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://mayarembed.r2.mayar.id/mayar-new-min.js';
@@ -20,11 +20,12 @@ const PricingSection: React.FC = () => {
     script.async = true;
     document.body.appendChild(script);
 
-    // Tambahkan styling kustom untuk menyembunyikan logo Mayar setelah skrip dimuat
+    // Tambahkan styling kustom untuk memperkecil logo Mayar
     const style = document.createElement('style');
     style.textContent = `
-      .mayar-button .mayar-logo {
-        display: none !important;
+      .mayar-button span.mayar-logo {
+        transform: scale(0.6);
+        margin-right: 4px;
       }
     `;
     document.head.appendChild(style);
@@ -173,7 +174,7 @@ const PricingSection: React.FC = () => {
                 data-padding-bottom="30%"
                 data-scrolling="true"
               >
-                <span></span>
+                <span className="mayar-logo"></span>
               </a>
               <Button
                 onClick={() => handleSubscribeClick(mayarBasicRef)}
@@ -214,7 +215,7 @@ const PricingSection: React.FC = () => {
                 data-padding-bottom="30%"
                 data-scrolling="true"
               >
-                <span></span>
+                <span className="mayar-logo"></span>
               </a>
               <Button
                 onClick={() => handleSubscribeClick(mayarProRef)}
@@ -252,7 +253,7 @@ const PricingSection: React.FC = () => {
                 data-padding-bottom="30%"
                 data-scrolling="true"
               >
-                <span></span>
+                <span className="mayar-logo"></span>
               </a>
               <Button
                 onClick={() => handleSubscribeClick(mayarBusinessRef)}
