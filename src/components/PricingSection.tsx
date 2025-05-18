@@ -14,9 +14,9 @@ const PricingSection: React.FC = () => {
       plans: ['Set 1', 'Set 2', 'Set 3'],
       prices: ['Rp200k', 'Rp250k', 'Rp350k'],
       subscribe: 'Mulai Langganan',
-      paymentInfo: 'Pemesanan bisa juga langsung transfer sesuai nominal Harga yang tertera ke Rekening Seabank',
-      account: '901872537380 a/n Asfahul Muhib',
-      confirmation: 'Kemudian silahkan kirim bukti transfer ke',
+      paymentInfo: 'Pemesanan bisa dilakukan dengan transfer sesuai nominal Harga yang tertera ke Rekening Seabank. Untuk pelanggan internasional, kami juga menerima pembayaran via Binance Pay.',
+      account: '901872537380 a/n Asfahul Muhib | Binance ID: 89893460',
+      confirmation: 'Kemudian silahkan kirim bukti transfer atau transaksi (Binance Pay) ke',
       activeToday: 'Bisa langsung aktif hari ini!',
       basicFeatures: [
         "10 Live, 720p, FPS 30, Bit 2500",
@@ -54,11 +54,11 @@ const PricingSection: React.FC = () => {
       title: 'Start 24/7 Streaming Today',
       subtitle: 'Choose a package that suits your needs. All packages come with the same features and full technical support.',
       plans: ['Plan 1', 'Plan 2', 'Plan 3'],
-      prices: ['$5', '$6', '$9'],
+      prices: ['$13', '$16', '$22'],
       subscribe: 'Start Subscription',
-      paymentInfo: 'You can also make a direct transfer according to the listed price to Seabank Account',
-      account: '901872537380 a/n Asfahul Muhib',
-      confirmation: 'Then please send the transfer proof to',
+      paymentInfo: 'You can make a direct transfer according to the listed price to Seabank Account. For international customers, we also accept Binance Pay.',
+      account: '901872537380 a/n Asfahul Muhib | Binance ID: 89893460',,
+      confirmation: 'Then please send the transfer or transaction proof (Binance Pay) to',
       activeToday: 'Can be activated today!',
       basicFeatures: [
         "10 Live, 720p, FPS 30, Bit 2500",
@@ -94,15 +94,23 @@ const PricingSection: React.FC = () => {
     },
   } as const;
 
-  // Link untuk setiap paket
+  // Link untuk setiap paket (lokal)
   const subscriptionLinks = {
     basic: "https://streamhib.myr.id/pl/set-1-streamhib-lengkap-fitur-jadwal-live",
     pro: "https://streamhib.myr.id/pl/set-2-streamhib-lengkap-fitur-jadwal-live",
     business: "https://streamhib.myr.id/pl/set-3-streamhib-lengkap-fitur-jadwal-live",
   };
 
-  const handleSubscribeClick = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+  // Link PayPal untuk setiap paket (internasional)
+  const paypalLinks = {
+    basic: "https://www.paypal.com/ncp/payment/DZQPHDLLNMRE4",
+    pro: "https://www.paypal.com/ncp/payment/PEGPEHJ6TK7EA",
+    business: "https://www.paypal.com/ncp/payment/QLCHTNYT3R2U6",
+  };
+
+  const handleSubscribeClick = (type: string) => {
+    const link = language === 'en' ? paypalLinks[type] : subscriptionLinks[type];
+    window.open(link, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -137,7 +145,7 @@ const PricingSection: React.FC = () => {
             </CardContent>
             <CardFooter className="flex justify-center">
               <Button
-                onClick={() => handleSubscribeClick(subscriptionLinks.basic)}
+                onClick={() => handleSubscribeClick('basic')}
                 className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
@@ -169,7 +177,7 @@ const PricingSection: React.FC = () => {
             </CardContent>
             <CardFooter className="flex justify-center">
               <Button
-                onClick={() => handleSubscribeClick(subscriptionLinks.pro)}
+                onClick={() => handleSubscribeClick('pro')}
                 className="w-full max-w-xs bg-streamhib-blue hover:bg-streamhib-blue/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
@@ -198,7 +206,7 @@ const PricingSection: React.FC = () => {
             </CardContent>
             <CardFooter className="flex justify-center">
               <Button
-                onClick={() => handleSubscribeClick(subscriptionLinks.business)}
+                onClick={() => handleSubscribeClick('business')}
                 className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
