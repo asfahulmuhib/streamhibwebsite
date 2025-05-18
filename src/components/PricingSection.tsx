@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Play } from "lucide-react";
@@ -6,35 +6,6 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const PricingSection: React.FC = () => {
   const { language } = useLanguage();
-
-  // Refs untuk elemen Mayar
-  const mayarBasicRef = useRef<HTMLAnchorElement>(null);
-  const mayarProRef = useRef<HTMLAnchorElement>(null);
-  const mayarBusinessRef = useRef<HTMLAnchorElement>(null);
-
-  // Memuat skrip Mayar dan styling kustom untuk memperkecil logo
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://mayarembed.r2.mayar.id/mayar-new-min.js';
-    script.type = 'text/javascript';
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Tambahkan styling kustom untuk memperkecil logo Mayar
-    const style = document.createElement('style');
-    style.textContent = `
-      .mayar-button span.mayar-logo {
-        transform: scale(0.6);
-        margin-right: 4px;
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      document.body.removeChild(script);
-      document.head.removeChild(style);
-    };
-  }, []);
 
   const translations = {
     id: {
@@ -123,17 +94,15 @@ const PricingSection: React.FC = () => {
     },
   } as const;
 
-  // Link Mayar untuk setiap paket
-  const mayarLinks = {
-    basic: "https://streamhib.myr.id/pl/set-1-streamhib-lengkap-fitur-jadwal-live?iframe=true",
-    pro: "https://streamhib.myr.id/pl/set-2-streamhib-lengkap-fitur-jadwal-live?iframe=true",
-    business: "https://streamhib.myr.id/pl/set-3-streamhib-lengkap-fitur-jadwal-live?iframe=true",
+  // Link untuk setiap paket
+  const subscriptionLinks = {
+    basic: "https://streamhib.myr.id/pl/set-1-streamhib-lengkap-fitur-jadwal-live",
+    pro: "https://streamhib.myr.id/pl/set-2-streamhib-lengkap-fitur-jadwal-live",
+    business: "https://streamhib.myr.id/pl/set-3-streamhib-lengkap-fitur-jadwal-live",
   };
 
-  const handleSubscribeClick = (ref: React.RefObject<HTMLAnchorElement>) => {
-    if (ref.current) {
-      ref.current.click();
-    }
+  const handleSubscribeClick = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -167,17 +136,8 @@ const PricingSection: React.FC = () => {
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
-              <a
-                ref={mayarBasicRef}
-                className="mayar-button iframe-lightbox-link hidden"
-                href={mayarLinks.basic}
-                data-padding-bottom="30%"
-                data-scrolling="true"
-              >
-                <span className="mayar-logo"></span>
-              </a>
               <Button
-                onClick={() => handleSubscribeClick(mayarBasicRef)}
+                onClick={() => handleSubscribeClick(subscriptionLinks.basic)}
                 className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
@@ -208,17 +168,8 @@ const PricingSection: React.FC = () => {
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
-              <a
-                ref={mayarProRef}
-                className="mayar-button iframe-lightbox-link hidden"
-                href={mayarLinks.pro}
-                data-padding-bottom="30%"
-                data-scrolling="true"
-              >
-                <span className="mayar-logo"></span>
-              </a>
               <Button
-                onClick={() => handleSubscribeClick(mayarProRef)}
+                onClick={() => handleSubscribeClick(subscriptionLinks.pro)}
                 className="w-full max-w-xs bg-streamhib-blue hover:bg-streamhib-blue/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
@@ -246,17 +197,8 @@ const PricingSection: React.FC = () => {
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
-              <a
-                ref={mayarBusinessRef}
-                className="mayar-button iframe-lightbox-link hidden"
-                href={mayarLinks.business}
-                data-padding-bottom="30%"
-                data-scrolling="true"
-              >
-                <span className="mayar-logo"></span>
-              </a>
               <Button
-                onClick={() => handleSubscribeClick(mayarBusinessRef)}
+                onClick={() => handleSubscribeClick(subscriptionLinks.business)}
                 className="w-full max-w-xs bg-streamhib-red hover:bg-streamhib-red/90"
               >
                 <Play className="h-5 w-5 mr-2" /> {translations[language].subscribe}
