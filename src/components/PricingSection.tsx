@@ -22,6 +22,37 @@ const PricingSection = () => {
       account: '901872537380 a/n Asfahul Muhib',
       confirmation: 'Kemudian silahkan kirim bukti transfer ke',
       activeToday: 'Bisa langsung aktif hari ini!',
+      basicFeatures: [
+        "10 Live, 720p, FPS 30, Bit 2500",
+        "8 Live, 1080p, FPS 30, Bit 6500",
+        "Sewaktu-waktu IP Berubah",
+        "Support YouTube & Facebook",
+        "Fitur Penjadwalan Youtube",
+        "Memakai Server DO",
+        "Penyimpanan 60GB",
+        "Support Banyak Channel Youtube",
+      ],
+      proFeatures: [
+        "25 Live, 720p, FPS 30, Bit 2500",
+        "17 Live, 1080p, FPS 30, Bit 6500",
+        "8 Live, 4k, FPS 30, Bit 12000",
+        "Support YouTube & Facebook",
+        "Fitur Penjadwalan Youtube",
+        "Lebih Stabil & IP Tidak Berubah",
+        "Penyimpanan 40GB",
+        "Support Banyak Channel Youtube",
+      ],
+      businessFeatures: [
+        "52 Live, 720p, FPS 30, Bit 2500",
+        "33 Live, 1080p, FPS 30, Bit 6500",
+        "14 Live, 4k, FPS 30, Bit 12000",
+        "Support YouTube & Facebook",
+        "Fitur Penjadwalan Youtube",
+        "Lebih Stabil & IP Tidak Berubah",
+        "Penyimpanan 80GB",
+        "Support Banyak Channel Youtube",
+      ],
+      popularLabel: "POPULER",
     },
     en: {
       title: 'Start 24/7 Streaming Today',
@@ -33,6 +64,37 @@ const PricingSection = () => {
       account: '901872537380 a/n Asfahul Muhib',
       confirmation: 'Then please send the transfer proof to',
       activeToday: 'Can be activated today!',
+      basicFeatures: [
+        "10 Live, 720p, FPS 30, Bit 2500",
+        "8 Live, 1080p, FPS 30, Bit 6500",
+        "IP May Change Anytime",
+        "Supports YouTube & Facebook",
+        "YouTube Scheduling Feature",
+        "Uses DO Server",
+        "60GB Storage",
+        "Supports Multiple YouTube Channels",
+      ],
+      proFeatures: [
+        "25 Live, 720p, FPS 30, Bit 2500",
+        "17 Live, 1080p, FPS 30, Bit 6500",
+        "8 Live, 4K, FPS 30, Bit 12000",
+        "Supports YouTube & Facebook",
+        "YouTube Scheduling Feature",
+        "More Stable & Fixed IP",
+        "40GB Storage",
+        "Supports Multiple YouTube Channels",
+      ],
+      businessFeatures: [
+        "52 Live, 720p, FPS 30, Bit 2500",
+        "33 Live, 1080p, FPS 30, Bit 6500",
+        "14 Live, 4K, FPS 30, Bit 12000",
+        "Supports YouTube & Facebook",
+        "YouTube Scheduling Feature",
+        "More Stable & Fixed IP",
+        "80GB Storage",
+        "Supports Multiple YouTube Channels",
+      ],
+      popularLabel: "POPULAR",
     },
   };
 
@@ -57,39 +119,13 @@ const PricingSection = () => {
               </div>
             </CardHeader>
             <CardContent className="pt-4 pb-6">
-              <ul className="text-left space-y-2">                
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>10 Live, 720p, FPS 30, Bit 2500</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>8 Live, 1080p, FPS 30, Bit 6500</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Sewaktu-waktu IP Berubah</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Support YouTube & Facebook</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Fitur Penjadwalan Youtube</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Memakai Server DO</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Penyimpanan 60GB</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Support Banyak Channel Youtube</span>
-                </li>
+              <ul className="text-left space-y-2">
+                {translations[language].basicFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center">
+                    <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
@@ -105,7 +141,7 @@ const PricingSection = () => {
           {/* Pro Plan */}
           <Card className="border-streamhib-blue relative overflow-hidden shadow-lg">
             <div className="absolute -right-12 top-6 bg-streamhib-red text-white text-xs font-bold px-12 py-1 transform rotate-45">
-              POPULER
+              {translations[language].popularLabel}
             </div>
             <CardHeader className="pb-2">
               <h3 className="text-xl font-bold">{translations[language].plans[1]}</h3>
@@ -116,38 +152,12 @@ const PricingSection = () => {
             </CardHeader>
             <CardContent className="pt-4 pb-6">
               <ul className="text-left space-y-2">
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>25 Live, 720p, FPS 30, Bit 2500</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>17 Live, 1080p, FPS 30, Bit 6500</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>8 Live, 4k, FPS 30, Bit 12000</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Support YouTube & Facebook</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Fitur Penjadwalan Youtube</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Lebih Stabil & IP Tidak Berubah</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Penyimpanan 40GB</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Support Banyak Channel Youtube</span>
-                </li>
+                {translations[language].proFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center">
+                    <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
@@ -171,38 +181,12 @@ const PricingSection = () => {
             </CardHeader>
             <CardContent className="pt-4 pb-6">
               <ul className="text-left space-y-2">
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>52 Live, 720p, FPS 30, Bit 2500</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>33 Live, 1080p, FPS 30, Bit 6500</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>14 Live, 4k, FPS 30, Bit 12000</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Support YouTube & Facebook</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Fitur Penjadwalan Youtube</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Lebih Stabil & IP Tidak Berubah</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Penyimpanan 80GB</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
-                  <span>Support Banyak Channel Youtube</span>
-                </li>
+                {translations[language].businessFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center">
+                    <div className="h-5 w-5 rounded-full bg-streamhib-red/10 text-streamhib-red flex items-center justify-center text-xs mr-2">✓</div>
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
             </CardContent>
             <CardFooter className="flex justify-center">
