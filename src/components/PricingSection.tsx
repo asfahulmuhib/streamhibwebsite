@@ -12,7 +12,7 @@ const PricingSection: React.FC = () => {
   const mayarProRef = useRef<HTMLAnchorElement>(null);
   const mayarBusinessRef = useRef<HTMLAnchorElement>(null);
 
-  // Memuat skrip Mayar saat komponen dimount
+  // Memuat skrip Mayar dan styling kustom untuk menyembunyikan logo
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://mayarembed.r2.mayar.id/mayar-new-min.js';
@@ -20,8 +20,18 @@ const PricingSection: React.FC = () => {
     script.async = true;
     document.body.appendChild(script);
 
+    // Tambahkan styling kustom untuk menyembunyikan logo Mayar setelah skrip dimuat
+    const style = document.createElement('style');
+    style.textContent = `
+      .mayar-button .mayar-logo {
+        display: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     return () => {
       document.body.removeChild(script);
+      document.head.removeChild(style);
     };
   }, []);
 
