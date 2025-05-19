@@ -3,7 +3,7 @@ import Logo from './Logo';
 import { useLanguage } from '@/context/LanguageContext'; // Sesuai dengan HeroSection
 
 const Footer = () => {
-  const { language } = useLanguage(); // Menggunakan useLanguage seperti di HeroSection
+  const { language } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const translations = {
@@ -51,7 +51,7 @@ const Footer = () => {
     }
   };
 
-  const t = translations[language] || translations.id; // Default ke 'id' jika language tidak valid
+  const t = translations[language] || translations.id;
 
   return (
     <footer className="bg-gray-50 py-12 px-4">
