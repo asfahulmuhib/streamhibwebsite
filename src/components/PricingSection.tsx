@@ -14,9 +14,9 @@ const PricingSection: React.FC = () => {
       plans: ['Set 1', 'Set 2', 'Set 3'],
       prices: ['Rp200k', 'Rp250k', 'Rp350k'],
       subscribe: 'Mulai Langganan',
-      paymentInfo: 'Pemesanan bisa dilakukan dengan transfer sesuai nominal Harga yang tertera ke Rekening Seabank. Untuk pelanggan internasional, kami juga menerima pembayaran via Binance Pay.',
-      account: '901872537380 a/n Asfahul Muhib | Binance ID: 89893460',
-      confirmation: 'Kemudian silahkan kirim bukti transfer atau transaksi (Binance Pay) ke',
+      paymentInfo: 'Pemesanan bisa dilakukan dengan transfer sesuai nominal Harga yang tertera ke Rekening Seabank.',
+      account: '901872537380 a/n Asfahul Muhib',
+      confirmation: 'Kemudian silahkan kirim bukti transfer ke',
       activeToday: 'Bisa langsung aktif hari ini!',
       basicFeatures: [
         "10 Live, 720p, FPS 30, Bit 2500",
@@ -56,8 +56,8 @@ const PricingSection: React.FC = () => {
       plans: ['Plan 1', 'Plan 2', 'Plan 3'],
       prices: ['$13', '$16', '$22'],
       subscribe: 'Start Subscription',
-      paymentInfo: 'You can make a direct transfer according to the listed price to Seabank Account. For international customers, we also accept Binance Pay.',
-      account: '901872537380 a/n Asfahul Muhib | Binance ID: 89893460',
+      paymentInfo: 'You can make a direct transfer according to the listed price to Binance Pay.',
+      account: 'Binance ID: 89893460',
       confirmation: 'Then please send the transfer or transaction proof (Binance Pay) to',
       activeToday: 'Can be activated today!',
       basicFeatures: [
