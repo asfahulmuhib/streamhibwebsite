@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Play, MessageCircle } from "lucide-react";
+import { Play } from "lucide-react";
 import { useLanguage } from '@/context/LanguageContext';
 
 const HeroSection = () => {
@@ -8,10 +8,6 @@ const HeroSection = () => {
 
   const handleTryNowClick = () => {
     window.open("http://46.101.161.249:5000/", "_blank", "noopener,noreferrer");
-  };
-
-  const handleWhatsAppClick = () => {
-    window.open("https://wa.me/6285722165165?text=Kak%20aku%20ingin%20pesan%20streamhib%2C%20transfer%20kemana%3F", "_blank", "noopener,noreferrer");
   };
 
   const translations = {
@@ -23,7 +19,6 @@ const HeroSection = () => {
       subtitle1: 'StreamHib bantu kamu live video nonstop, langsung dari server.',
       subtitle2: 'Tanpa install, tanpa takut mati sendiri. Setting 1x, live terus!',
       tryNow: 'Coba Trial Gratis',
-      whatsapp: 'Pesan Via Whatsapp',
     },
     en: {
       liveIndicator: 'LIVE',
@@ -33,7 +28,6 @@ const HeroSection = () => {
       subtitle1: 'StreamHib helps you stream videos non-stop, directly from the server.',
       subtitle2: 'No installation, no fear of crashing. Set it once, stream forever!',
       tryNow: 'Try Free Trial',
-      whatsapp: 'Message via Whatsapp',
     },
   };
 
@@ -74,13 +68,6 @@ const HeroSection = () => {
             className="bg-streamhib-red hover:bg-streamhib-red/90 text-white font-semibold text-lg"
           >
             <Play className="h-5 w-5 mr-2" /> {translations[language].tryNow}
-          </Button>
-          <Button
-            onClick={handleWhatsAppClick}
-            size="lg"
-            className="bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold text-lg shadow-sm"
-          >
-            <MessageCircle className="h-5 w-5 mr-2" /> {translations[language].whatsapp}
           </Button>
         </div>
       </div>
