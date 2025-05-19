@@ -1,9 +1,59 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Logo from './Logo';
+import { LanguageContext } from '../context/LanguageContext'; // Sesuaikan path sesuai struktur proyekmu
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+  const { language } = useContext(LanguageContext); // Ambil bahasa dari context
+
+  // Teks dalam dua bahasa
+  const translations = {
+    id: {
+      description: 'Platform live streaming 24/7 yang berjalan otomatis di server. Buat live YouTube tanpa harus menyalakan komputer.',
+      platform: 'Platform',
+      company: 'Perusahaan',
+      support: 'Support',
+      features: 'Fitur',
+      pricing: 'Harga',
+      demo: 'Demo',
+      api: 'API',
+      about: 'Tentang Kami',
+      blog: 'Blog',
+      careers: 'Karir',
+      contact: 'Kontak',
+      help: 'Help Center',
+      tutorial: 'Tutorial',
+      faq: 'FAQ',
+      community: 'Community',
+      terms: 'Syarat',
+      privacy: 'Privasi',
+      cookies: 'Kue'
+    },
+    en: {
+      description: 'A 24/7 live streaming platform that runs automatically on the server. Create YouTube live streams without turning on your computer.',
+      platform: 'Platform',
+      company: 'Company',
+      support: 'Support',
+      features: 'Features',
+      pricing: 'Pricing',
+      demo: 'Demo',
+      api: 'API',
+      about: 'About Us',
+      blog: 'Blog',
+      careers: 'Careers',
+      contact: 'Contact',
+      help: 'Help Center',
+      tutorial: 'Tutorial',
+      faq: 'FAQ',
+      community: 'Community',
+      terms: 'Terms',
+      privacy: 'Privacy',
+      cookies: 'Cookies'
+    }
+  };
+
+  const t = language === 'en' ? translations.en : translations.id; // Pilih bahasa berdasarkan context
+
   return (
     <footer className="bg-gray-50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -11,7 +61,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <Logo className="mb-4" />
             <p className="text-gray-600 mb-4">
-              A 24/7 live streaming platform that runs automatically on the server. Create YouTube live streams without turning on your computer.
+              {t.description}
             </p>
             <div className="flex items-center space-x-4">
               <a href="#" className="text-gray-500 hover:text-streamhib-blue transition-colors">
@@ -38,44 +88,44 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-streamhib-blue mb-4">Platform</h3>
+            <h3 className="font-semibold text-streamhib-blue mb-4">{t.platform}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Features</a></li>
-              <li><a href="#pricing" className="text-gray-600 hover:text-streamhib-red">Pricing</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Demo</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">API</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.features}</a></li>
+              <li><a href="#pricing" className="text-gray-600 hover:text-streamhib-red">{t.pricing}</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.demo}</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.api}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-streamhib-blue mb-4">Company</h3>
+            <h3 className="font-semibold text-streamhib-blue mb-4">{t.company}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">About Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Blog</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Careers</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Contact</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.about}</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.blog}</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.careers}</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.contact}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-streamhib-blue mb-4">Support</h3>
+            <h3 className="font-semibold text-streamhib-blue mb-4">{t.support}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Help Center</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Tutorial</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">FAQ</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Community</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.help}</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.tutorial}</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.faq}</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">{t.community}</a></li>
             </ul>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+          <p className="text-gray-600 text-sm mb-4 md:mb-0">
             © {currentYear} StreamHib. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-500 hover:text-streamhib-blue text-sm">Terms</a>
-            <a href="#" className="text-gray-500 hover:text-streamhib-blue text-sm">Privacy</a>
-            <a href="#" className="text-gray-500 hover:text-streamhib-blue text-sm">Cookies</a>
+            <a href="#" className="text-gray-500 hover:text-streamhib-blue text-sm">{t.terms}</a>
+            <a href="#" className="text-gray-500 hover:text-streamhib-blue text-sm">{t.privacy}</a>
+            <a href="#" className="text-gray-500 hover:text-streamhib-blue text-sm">{t.cookies}</a>
           </div>
         </div>
       </div>
