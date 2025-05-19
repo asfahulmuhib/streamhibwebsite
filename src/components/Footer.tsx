@@ -26,7 +26,7 @@ const Footer = () => {
       community: 'Komunitas',
       terms: 'Syarat',
       privacy: 'Privasi',
-      cookies: 'Kue'
+      cookies: 'Cookies'
     },
     en: {
       description: 'A 24/7 live streaming platform that runs automatically on the server. Create YouTube live streams without turning on your computer.',
