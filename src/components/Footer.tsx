@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import Logo from './Logo';
-import { LanguageContext } from '../context/LanguageContext'; // Sesuaikan path sesuai struktur proyekmu
+import { LanguageContext } from './context/LanguageContext'; // Sesuaikan path sesuai struktur proyekmu
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { language } = useContext(LanguageContext); // Ambil bahasa dari context
 
-  // Teks dalam dua bahasa
+  // Objek terjemahan untuk dual bahasa
   const translations = {
     id: {
       description: 'Platform live streaming 24/7 yang berjalan otomatis di server. Buat live YouTube tanpa harus menyalakan komputer.',
@@ -21,10 +21,10 @@ const Footer = () => {
       blog: 'Blog',
       careers: 'Karir',
       contact: 'Kontak',
-      help: 'Help Center',
+      help: 'Pusat Bantuan',
       tutorial: 'Tutorial',
       faq: 'FAQ',
-      community: 'Community',
+      community: 'Komunitas',
       terms: 'Syarat',
       privacy: 'Privasi',
       cookies: 'Kue'
@@ -52,7 +52,7 @@ const Footer = () => {
     }
   };
 
-  const t = language === 'en' ? translations.en : translations.id; // Pilih bahasa berdasarkan context
+  const t = translations[language] || translations.id; // Gunakan bahasa dari context, default ke 'id' jika tidak ada
 
   return (
     <footer className="bg-gray-50 py-12 px-4">
@@ -119,7 +119,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-600 text-sm mb-4 md:mb-0">
+          <p className="text-gray-500 text-sm mb-4 md:mb-0">
             © {currentYear} StreamHib. All rights reserved.
           </p>
           <div className="flex space-x-6">
