@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Logo from './Logo';
-import { LanguageContext } from './context/LanguageContext'; // Sesuaikan path sesuai struktur proyekmu
+import { useLanguage } from '@/context/LanguageContext'; // Sesuai dengan HeroSection
 
 const Footer = () => {
+  const { language } = useLanguage(); // Menggunakan useLanguage seperti di HeroSection
   const currentYear = new Date().getFullYear();
-  const { language } = useContext(LanguageContext); // Ambil bahasa dari context
 
-  // Objek terjemahan untuk dual bahasa
   const translations = {
     id: {
       description: 'Platform live streaming 24/7 yang berjalan otomatis di server. Buat live YouTube tanpa harus menyalakan komputer.',
@@ -52,7 +51,7 @@ const Footer = () => {
     }
   };
 
-  const t = translations[language] || translations.id; // Gunakan bahasa dari context, default ke 'id' jika tidak ada
+  const t = translations[language] || translations.id; // Default ke 'id' jika language tidak valid
 
   return (
     <footer className="bg-gray-50 py-12 px-4">
