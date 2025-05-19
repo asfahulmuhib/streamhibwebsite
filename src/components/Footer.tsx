@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Logo from './Logo';
 
@@ -12,7 +11,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <Logo className="mb-4" />
             <p className="text-gray-600 mb-4">
-              Platform live streaming 24/7 yang berjalan otomatis di server. Buat live YouTube tanpa harus menyalakan komputer.
+              A 24/7 live streaming platform that runs automatically on the server. Create YouTube live streams without turning on your computer.
             </p>
             <div className="flex items-center space-x-4">
               <a href="#" className="text-gray-500 hover:text-streamhib-blue transition-colors">
@@ -32,7 +31,7 @@ const Footer = () => {
               </a>
               <a href="#" className="text-gray-500 hover:text-streamhib-blue transition-colors">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                 </svg>
               </a>
             </div>
@@ -49,12 +48,12 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-streamhib-blue mb-4">Perusahaan</h3>
+            <h3 className="font-semibold text-streamhib-blue mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Tentang Kami</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">About Us</a></li>
               <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Blog</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Karir</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Kontak</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Careers</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-streamhib-red">Contact</a></li>
             </ul>
           </div>
           
@@ -71,7 +70,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} StreamHib. All rights reserved.
+            © {currentYear} StreamHib. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-500 hover:text-streamhib-blue text-sm">Terms</a>
