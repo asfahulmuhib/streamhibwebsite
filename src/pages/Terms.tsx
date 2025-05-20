@@ -34,23 +34,31 @@ const Terms = () => {
   const t = translations[language] || translations.id;
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 px-4 py-16">
-      <div className="max-w-4xl mx-auto space-y-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-streamhib-blue text-center">
+    <section className="min-h-screen bg-gradient-to-b from-white to-gray-50 px-4 py-12">
+      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 animate-fade-in">
+        <h1 className="text-3xl md:text-4xl font-bold text-streamhib-blue mb-6 border-b-2 border-streamhib-blue pb-2">
           {t.title}
         </h1>
-        <p className="text-lg text-gray-600 text-center">
+        <p className="text-lg text-gray-600 mb-6">
           {t.welcome}
         </p>
-        <div className="space-y-4 text-gray-600">
-          <h2 className="text-xl font-semibold text-streamhib-blue">{t.usage}</h2>
-          <p>{t.usageText}</p>
-          <h2 className="text-xl font-semibold text-streamhib-blue">{t.responsibility}</h2>
-          <p>{t.responsibilityText}</p>
-          <h2 className="text-xl font-semibold text-streamhib-blue">{t.termination}</h2>
-          <p>{t.terminationText}</p>
-          <h2 className="text-xl font-semibold text-streamhib-blue">{t.law}</h2>
-          <p>{t.lawText}</p>
+        <div className="space-y-6 text-gray-600">
+          <div className="p-4 bg-gray-50 rounded-md">
+            <h2 className="text-xl font-semibold text-streamhib-blue mb-2">{t.usage}</h2>
+            <p>{t.usageText}</p>
+          </div>
+          <div className="p-4 bg-gray-50 rounded-md">
+            <h2 className="text-xl font-semibold text-streamhib-blue mb-2">{t.responsibility}</h2>
+            <p>{t.responsibilityText}</p>
+          </div>
+          <div className="p-4 bg-gray-50 rounded-md">
+            <h2 className="text-xl font-semibold text-streamhib-blue mb-2">{t.termination}</h2>
+            <p>{t.terminationText}</p>
+          </div>
+          <div className="p-4 bg-gray-50 rounded-md">
+            <h2 className="text-xl font-semibold text-streamhib-blue mb-2">{t.law}</h2>
+            <p>{t.lawText}</p>
+          </div>
         </div>
       </div>
     </section>
