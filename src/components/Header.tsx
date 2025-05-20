@@ -1,10 +1,10 @@
-
 import React from 'react';
 import Logo from './Logo';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { useLanguage } from '@/context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import { Link } from 'react-router-dom'; // Impor Link untuk navigasi
 
 const Header = () => {
   const { language } = useLanguage();
@@ -53,6 +53,13 @@ const Header = () => {
                 {language === 'id' ? 'Paket' : 'Pricing'}
               </NavigationMenuLink>
             </a>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link to="/tutorial">
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {language === 'id' ? 'Tutorial Penggunaan' : 'Usage Tutorial'}
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
