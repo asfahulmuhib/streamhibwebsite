@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { useLanguage } from '@/context/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const PaymentSuccessfull: React.FC = () => {
   const { language } = useLanguage();
+  const [isAgreed, setIsAgreed] = useState(false); // State untuk checkbox
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/6285722165165?text=Halo%20kak%2C%20saya%20sudah%20order%20paket%20di%20StreamHib%2C%20bisa%20segera%20dibuatkan%20servernya%3F", "_blank", "noopener,noreferrer");
@@ -17,13 +19,17 @@ const PaymentSuccessfull: React.FC = () => {
   const translations = {
     id: {
       title: 'Terimakasih Sudah Order!',
-      message: 'Permintaan Anda sudah kami terima. Silakan hubungi kami melalui WhatsApp atau Telegram untuk segera dibuatkan server.',
+      message: 'Permintaan Anda sudah kami terima. Silakan setujui Syarat dan Ketentuan kami sebelum menghubungi untuk pembuatan server.',
+      checkboxLabel: 'Saya setuju dengan ',
+      termsLink: 'Syarat dan Ketentuan',
       buttonWhatsApp: 'Hubungi via WhatsApp',
       buttonTelegram: 'Hubungi via Telegram',
     },
     en: {
       title: 'Thank You for Your Order!',
-      message: 'We have received your request. Please contact us via WhatsApp or Telegram to have your server set up immediately.',
+      message: 'We have received your request. Please agree to our Terms and Conditions before contacting us for server setup.',
+      checkboxLabel: 'I agree to the ',
+      termsLink: 'Terms and Conditions',
       buttonWhatsApp: 'Contact via WhatsApp',
       buttonTelegram: 'Contact via Telegram',
     },
@@ -39,16 +45,37 @@ const PaymentSuccessfull: React.FC = () => {
         <p className="text-lg text-gray-600">
           {translations[language].message}
         </p>
+        <div className="flex items-center justify-center space-x-2">
+          <input
+            type="checkbox"
+            id="terms-agreement"
+            checked={isAgreed}
+            onChange={(e) => setIsAgreed(e.target.checked)}
+            className="h-5 w-5 text-streamhib-blue border-gray-300 rounded focus:ring-streamhib-blue"
+          />
+          <label htmlFor="terms-agreement" className="text-gray-600">
+            {translations[language].checkboxLabel}
+            <Link to="/terms" className="text-streamhib-blue hover:underline">
+              {translations[language].termsLink}
+            </Link>
+          </label>
+        </div>
         <div className="flex justify-center space-x-4">
           <Button
             onClick={handleWhatsAppClick}
-            className="bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold text-lg"
+            disabled={!isAgreed}
+            className={`${
+              isAgreed ? 'bg-[#25D366] hover:bg-[#128C7E]' : 'bg-gray-300 cursor-not-allowed'
+            } text-white font-semibold text-lg`}
           >
             {translations[language].buttonWhatsApp}
           </Button>
           <Button
             onClick={handleTelegramClick}
-            className="bg-[#1E90FF] hover:bg-[#147BC9] text-white font-semibold text-lg"
+            disabled={!isAgreed}
+            className={`${
+              isAgreed ? 'bg-[#1E90FF] hover:bg-[#147BC9]' : 'bg-gray-300 cursor-not-allowed'
+            } text-white font-semibold text-lg`}
           >
             {translations[language].buttonTelegram}
           </Button>
