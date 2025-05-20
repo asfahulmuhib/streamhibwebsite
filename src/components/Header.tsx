@@ -27,7 +27,7 @@ const Header = () => {
       <NavigationMenu>
         <NavigationMenuList className="hidden md:flex">
           <NavigationMenuItem>
-            <a href="#" onClick={(e) => scrollToSection('hero', e)}>
+            <a href="/" onClick={(e) => scrollToSection('hero', e)}>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 {language === 'id' ? 'Home' : 'Home'}
               </NavigationMenuLink>
