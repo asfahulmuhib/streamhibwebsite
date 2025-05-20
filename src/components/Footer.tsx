@@ -85,9 +85,9 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-streamhib-blue mb-4">{t.platform}</h3>
             <ul className="space-y-2">
-              <li><a href="/features" className="text-gray-600 hover:text-streamhib-red">{t.features}</a></li>
+              <li><a href="#fitur" className="text-gray-600 hover:text-streamhib-red">{t.features}</a></li>
               <li><a href="#pricing" className="text-gray-600 hover:text-streamhib-red">{t.pricing}</a></li>
-              <li><a href="/demo" className="text-gray-600 hover:text-streamhib-red">{t.demo}</a></li>
+              <li><a href="http://46.101.161.249:5000/" className="text-gray-600 hover:text-streamhib-red">{t.demo}</a></li>
             </ul>
           </div>
           
@@ -95,17 +95,17 @@ const Footer = () => {
             <h3 className="font-semibold text-streamhib-blue mb-4">{t.company}</h3>
             <ul className="space-y-2">
               <li><a href="/about" className="text-gray-600 hover:text-streamhib-red">{t.about}</a></li>
-              <li><a href="/contact" className="text-gray-600 hover:text-streamhib-red">{t.contact}</a></li>
+              <li><a href="#cta" className="text-gray-600 hover:text-streamhib-red">{t.contact}</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold text-streamhib-blue mb-4">{t.support}</h3>
             <ul className="space-y-2">
-              <li><a href="/help" className="text-gray-600 hover:text-streamhib-red">{t.help}</a></li>
+              <li><a href="#cta" className="text-gray-600 hover:text-streamhib-red">{t.help}</a></li>
               <li><a href="/tutorial" className="text-gray-600 hover:text-streamhib-red">{t.tutorial}</a></li>
-              <li><a href="/faq" className="text-gray-600 hover:text-streamhib-red">{t.faq}</a></li>
-              <li><a href="/faq" className="text-gray-600 hover:text-streamhib-red">{t.community}</a></li>
+              <li><a href="#faq" className="text-gray-600 hover:text-streamhib-red">{t.faq}</a></li>
+              <li><a href="https://t.me/+92sib5XsMM5iNzA1" className="text-gray-600 hover:text-streamhib-red">{t.community}</a></li>
             </ul>
           </div>
         </div>
