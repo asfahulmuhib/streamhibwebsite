@@ -34,18 +34,26 @@ const Terms = () => {
   const t = translations[language] || translations.id;
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4">
-      <h1 className="text-3xl font-bold mb-4">{t.title}</h1>
-      <p className="mb-4">{t.welcome}</p>
-      <h2 className="text-xl font-semibold mt-6 mb-2">{t.usage}</h2>
-      <p className="mb-4">{t.usageText}</p>
-      <h2 className="text-xl font-semibold mt-6 mb-2">{t.responsibility}</h2>
-      <p className="mb-4">{t.responsibilityText}</p>
-      <h2 className="text-xl font-semibold mt-6 mb-2">{t.termination}</h2>
-      <p className="mb-4">{t.terminationText}</p>
-      <h2 className="text-xl font-semibold mt-6 mb-2">{t.law}</h2>
-      <p className="mb-4">{t.lawText}</p>
-    </div>
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 px-4 py-16">
+      <div className="max-w-4xl mx-auto space-y-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-streamhib-blue text-center">
+          {t.title}
+        </h1>
+        <p className="text-lg text-gray-600 text-center">
+          {t.welcome}
+        </p>
+        <div className="space-y-4 text-gray-600">
+          <h2 className="text-xl font-semibold text-streamhib-blue">{t.usage}</h2>
+          <p>{t.usageText}</p>
+          <h2 className="text-xl font-semibold text-streamhib-blue">{t.responsibility}</h2>
+          <p>{t.responsibilityText}</p>
+          <h2 className="text-xl font-semibold text-streamhib-blue">{t.termination}</h2>
+          <p>{t.terminationText}</p>
+          <h2 className="text-xl font-semibold text-streamhib-blue">{t.law}</h2>
+          <p>{t.lawText}</p>
+        </div>
+      </div>
+    </section>
   );
 };
 
