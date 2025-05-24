@@ -11,6 +11,7 @@ const PricingSection: React.FC = () => {
     id: {
       title: 'Mulai Streaming 24/7 Hari Ini',
       subtitle: 'Pilih paket yang sesuai dengan kebutuhan Anda. Semua paket dilengkapi dengan fitur yang sama dan dukungan teknis penuh.',
+      notice: 'Catatan: Pemesanan yang dilakukan setelah pukul 21.00 WIB akan diproses pada pagi hari berikutnya. Terima kasih atas pengertian Anda!',
       plans: ['Set 1', 'Set 2', 'Set 3'],
       prices: ['Rp200k', 'Rp250k', 'Rp350k'],
       subscribe: 'Mulai Langganan',
@@ -53,6 +54,7 @@ const PricingSection: React.FC = () => {
     en: {
       title: 'Start 24/7 Streaming Today',
       subtitle: 'Choose a package that suits your needs. All packages come with the same features and full technical support.',
+      notice: 'Note: Orders placed after 9:00 PM WIB will be processed the next morning. Thank you for your understanding!',
       plans: ['Plan 1', 'Plan 2', 'Plan 3'],
       prices: ['$13', '$16', '$22'],
       subscribe: 'Start Subscription',
@@ -94,14 +96,12 @@ const PricingSection: React.FC = () => {
     },
   } as const;
 
-  // Link untuk setiap paket (lokal)
   const subscriptionLinks = {
     basic: "https://streamhib.myr.id/pl/set-1-streamhib-lengkap-fitur-jadwal-live",
     pro: "https://streamhib.myr.id/pl/set-2-streamhib-lengkap-fitur-jadwal-live",
     business: "https://streamhib.myr.id/pl/set-3-streamhib-lengkap-fitur-jadwal-live",
   };
 
-  // Link PayPal untuk setiap paket (internasional)
   const paypalLinks = {
     basic: "https://www.paypal.com/ncp/payment/DZQPHDLLNMRE4",
     pro: "https://www.paypal.com/ncp/payment/PEGPEHJ6TK7EA",
@@ -119,8 +119,11 @@ const PricingSection: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-streamhib-blue mb-4">
           {translations[language].title}
         </h2>
-        <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 mb-4 max-w-2xl mx-auto">
           {translations[language].subtitle}
+        </p>
+        <p className="text-sm text-gray-500 italic mb-12 max-w-2xl mx-auto border-l-4 border-streamhib-blue pl-4">
+          {translations[language].notice}
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
