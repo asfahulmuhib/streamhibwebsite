@@ -6,10 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PaymentSuccessfull from "./pages/PaymentSuccessfull";
+import RenewalSuccessfull from "./pages/RenewalSuccessfull"; // Impor RenewalSuccessfull
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Cookies from "./pages/Cookies";
-import Tutorial from "./pages/Tutorial"; // Impor Tutorial
+import Tutorial from "./pages/Tutorial";
 import { LanguageProvider } from "./context/LanguageContext";
 import "./App.css";
 
@@ -25,10 +26,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/paymentsuccessfull" element={<PaymentSuccessfull />} />
+            <Route path="/renewalsuccessfull" element={<RenewalSuccessfull />} /> {/* Route baru */}
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/cookies" element={<Cookies />} />
-            <Route path="/tutorial" element={<Tutorial />} /> {/* Route untuk Tutorial */}
+            <Route path="/tutorial" element={<Tutorial />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
