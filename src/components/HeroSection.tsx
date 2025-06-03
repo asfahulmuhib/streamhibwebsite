@@ -7,7 +7,7 @@ const HeroSection = () => {
   const { language } = useLanguage();
 
   const handleTryNowClick = () => {
-    window.open("http://46.101.161.249:5000/", "_blank", "noopener,noreferrer");
+    window.open("http://164.92.143.123:5000/", "_blank", "noopener,noreferrer");
   };
 
   const translations = {
